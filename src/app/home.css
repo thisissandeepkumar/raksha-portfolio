@@ -1,0 +1,29 @@
+.welcome-card {
+  height: 560px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.welcome-card-text-content {
+  width: 544px;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.welcome-1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.welcome-2 {
+  font-size: 70px;
+  font-weight: 400;
+}

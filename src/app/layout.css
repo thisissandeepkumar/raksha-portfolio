@@ -4,6 +4,7 @@
   flex-direction: row;
   justify-content: space-between;
   margin: 0px 120px 0px 120px;
+  height: 104px;
 }
 
 .menu-icon {
