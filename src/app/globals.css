@@ -9,9 +9,17 @@ nav {
   padding: 8px 32px 8px 32px;
   cursor: pointer;
   border: none;
+  white-space: nowrap;
 }
 
 .dark-button:hover {
   background-color: #3A2E80;
   text-decoration: underline;
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px)  {
+  .dark-button {
+    font-size: 12;
+    white-space: nowrap;
+  }
 }

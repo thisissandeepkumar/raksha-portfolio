@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import "./globals.css"
 import "./layout.css"
 
@@ -31,24 +32,41 @@ export default function RootLayout({
 
       <body>
         <nav className="main-nav">
+          <Image
+            className="menu-icon"
+            src="/icons/menu_icon.svg"
+            alt="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTsptVQSRVRivZeLcgXA7rv3z0na_vtcJ-xapXoH-bhVNM78ghI"
+            width={30}
+            height={30}
+          />
           <ul className="nav-ul">
-            <Link className="nav-li" href="#">
-              MY PROJECTS
-            </Link>
-            <Link className="nav-li" href="#">
-              ABOUT ME
-            </Link>
-            <Link className="nav-li" href="#">
-              MY BLOGS
-            </Link>
-            <Link className="nav-li" href="#">
-              CONTACT ME
-            </Link>
-            <Link className="nav-li" href="#">
-              SUPPORT
-            </Link>
+            <li>
+              <Link className="nav-li" href="#">
+                MY PROJECTS
+              </Link>
+            </li>
+            <li>
+              <Link className="nav-li" href="#">
+                ABOUT ME
+              </Link>
+            </li>
+            <li>
+              <Link className="nav-li" href="#">
+                MY BLOGS
+              </Link>
+            </li>
+            <li>
+              <Link className="nav-li" href="#">
+                CONTACT ME
+              </Link>
+            </li>
+            <li>
+              <Link className="nav-li" href="#">
+                SUPPORT
+              </Link>
+            </li>
           </ul>
-          <Link href="#">
+          <Link href="https://drive.google.com/file/d/1mp_nRpDA44XLWsJkfrlpWJ1eqOSR7xtc/view?usp=sharing" target="_blank">
             <button className="dark-button">RESUME ↗</button>
           </Link>
         </nav>

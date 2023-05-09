@@ -6,6 +6,40 @@
   margin: 0px 120px 0px 120px;
 }
 
+.menu-icon {
+  display: none;
+}
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+  .main-nav {
+    margin: 0px;
+  }
+
+  .nav-ul {
+    display: none;
+  }
+
+  .menu-icon {
+    display: inline;
+    align-self: center;
+  }
+
+  .menu-icon:hover {
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .main-nav {
+    margin: 0px 60px 0px 60px;
+    align-items: center;
+  }
+
+  .nav-ul {
+    display: none;
+  }
+}
+
 .nav-ul {
   list-style-type: none;
   margin: 0;
@@ -18,10 +52,11 @@
 }
 
 .nav-li {
-  float: left;
   margin: 0 10px 0 10px;
   text-decoration: none;
   color: black;
+  font-size: 10;
+  white-space: nowrap;
 }
 
 .nav-li:hover {
