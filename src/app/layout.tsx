@@ -1,5 +1,6 @@
-import Head from "next/head";
-import Script from "next/script";
+import Link from "next/link";
+import "./globals.css"
+import "./layout.css"
 
 export const metadata = {
   title: 'Raksha S',
@@ -12,25 +13,45 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" data-bs-theme="light">
-      <Head>
-        <link
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-          crossOrigin="anonymous"
-        />
-      </Head>
-
-      <Script>
-        <script
-          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-          crossOrigin="anonymous"
-        />
-      </Script>
-
-      <body>{children}</body>
+    <html lang="en">
+      <body>
+        <nav className="main-nav">
+          <ul className="nav-ul">
+            <Link
+              className="nav-li"
+              href="https://github.com/thisissandeepkumar/raksha-portfolio"
+            >
+              MY PROJECTS
+            </Link>
+            <Link
+              className="nav-li"
+              href="https://github.com/thisissandeepkumar/raksha-portfolio"
+            >
+              ABOUT ME
+            </Link>
+            <Link
+              className="nav-li"
+              href="https://github.com/thisissandeepkumar/raksha-portfolio"
+            >
+              MY BLOGS
+            </Link>
+            <Link
+              className="nav-li"
+              href="https://github.com/thisissandeepkumar/raksha-portfolio"
+            >
+              CONTACT ME
+            </Link>
+            <Link
+              className="nav-li"
+              href="https://github.com/thisissandeepkumar/raksha-portfolio"
+            >
+              SUPPORT
+            </Link>
+          </ul>
+          <button className="dark-button">RESUME ↗</button>
+        </nav>
+        {children}
+      </body>
     </html>
   );
 }

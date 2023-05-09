@@ -1,0 +1,17 @@
+.main-nav {
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.nav-ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.nav-li {
+  float: left;
+}
