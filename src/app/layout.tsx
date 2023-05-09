@@ -5,7 +5,7 @@ import "./layout.css"
 
 export const metadata = {
   title: 'Raksha S',
-  description: 'Your next UI/UX Developer!',
+  description: 'Your next UI/UX Designer!',
 }
 
 export default function RootLayout({
