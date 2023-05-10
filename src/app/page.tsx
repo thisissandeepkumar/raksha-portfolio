@@ -1,5 +1,11 @@
 import Image from "next/image";
+import localFont from "next/font/local"
 import "./home.css"
+
+const broadsheetLdoFont = localFont({
+  src: "./fonts/Broadsheet_LDO.ttf",
+  variable: "--font-broadsheet-ldo"
+})
 
 export default function Home() {
   return (
@@ -15,7 +21,7 @@ function WelcomeCard() {
       <div className="card-content">
         <div className="welcome-card-text-content">
           <p className="welcome-1">Hey, I'm Raksha 👋</p>
-          <p className="welcome-2">Welcome to My UI & UX Design Portfolio</p>
+          <p className={`${broadsheetLdoFont.variable} welcome-2`}>Welcome to My UI & UX Design Portfolio</p>
         </div>
         <div>
           <Image
