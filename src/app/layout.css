@@ -22,6 +22,26 @@
   align-items: center;
 }
 
+.footer-routes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-routes-item {
+  color: #E5E2F6;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.footer-divider {
+  width: 100%;
+}
+
 .contact-me {
   color: #E5E2F6;
   font-family: "Broadsheet", sans-serif;
@@ -44,6 +64,7 @@
   font-family: 'Inter' sans-serif;
   font-weight: 700;
   font-size: 18px;
+  white-space: nowrap;
 }
 
 .contact-details-description {
@@ -51,6 +72,7 @@
   font-family: 'Inter' sans-serif;
   font-weight: 400;
   font-size: 16px;
+  white-space: nowrap;
 }
 
 .social-handles {
@@ -97,6 +119,12 @@
   .menu-icon:hover {
     cursor: pointer;
   }
+
+  .footer-routes {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -107,6 +135,33 @@
 
   .nav-ul {
     display: none;
+  }
+
+  .main-footer {
+    height: 666px;
+  }
+
+  .footer-routes {
+    height: 334px;
+    flex-direction: column;
+  }
+
+  .contact-me {
+    font-size: 64px;
+  }
+
+  .contact-section {
+    width: 80%;
+    justify-content: space-evenly;
+  }
+
+  .social-bubble {
+    width: 70px;
+    height: 70px;
+  }
+
+  .social-bubble-icon {
+    margin-top: 15px;
   }
 }
 

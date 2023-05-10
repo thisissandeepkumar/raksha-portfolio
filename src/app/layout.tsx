@@ -75,6 +75,14 @@ export default function RootLayout({
         </nav>
         {children}
         <footer className="main-footer">
+          <div className="footer-routes">
+            <div className="footer-routes-item">MY PROJECTS</div>
+            <div className="footer-routes-item">ABOUT ME</div>
+            <div className="footer-routes-item">MY BLOGS</div>
+            <div className="footer-routes-item">CONTACT ME</div>
+            <div className="footer-routes-item">SUPPORT</div>
+          </div>
+          <hr className="solid-divider footer-divider" />
           <h2 className="contact-me">Contact Me</h2>
           <div className="contact-section">
             <div className="contact-details">
