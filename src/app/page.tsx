@@ -15,9 +15,9 @@ export default function Home() {
       <NumericalValuesCard />
       <MyProjects />
       <ProjectsGridView />
-      <button className="dark-button scroll-up-button">
-        <Link href="#">SCROLL UP ↗</Link>
-      </button>
+      <Link href="#">
+        <button className="dark-button scroll-up-button">SCROLL UP ↗</button>
+      </Link>
     </div>
   );
 }

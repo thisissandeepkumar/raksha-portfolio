@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
 
   return (
-    <html lang="en">
+    <html lang="en" style={{scrollBehavior: "smooth"}}>
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
