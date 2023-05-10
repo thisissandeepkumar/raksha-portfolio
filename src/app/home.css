@@ -154,4 +154,14 @@
     flex-direction: column;
     height: 520px;
   }
+
+  .projects-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .projects-grid-tile {
+    width: 80vw;
+    height: 80vw;
+  }
 }
