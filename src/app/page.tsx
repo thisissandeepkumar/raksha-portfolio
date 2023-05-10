@@ -25,12 +25,13 @@ function WelcomeCard() {
           Welcome to My UI & UX Design Portfolio
         </p>
       </div>
-      <div>
+      <div className="card-image-content">
         <Image
           src="/images/raksha.png"
-          alt="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV3qnIImwUBUIdIH8nYCtycbzK3vwaFnKKIOQQaa7R&s"
-          width={472}
-          height={550}
+          alt="Image of Raksha"
+          // width={472}
+          // height={550}
+          fill
         />
       </div>
     </div>
