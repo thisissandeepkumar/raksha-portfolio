@@ -1,6 +1,7 @@
 import Image from "next/image";
 import localFont from "next/font/local"
 import "./home.css"
+import Link from "next/link";
 
 const broadsheetLdoFont = localFont({
   src: "./fonts/Broadsheet_LDO.ttf",
@@ -14,6 +15,10 @@ export default function Home() {
       <NumericalValuesCard />
       <MyProjects />
       <ProjectsGridView />
+      <Link href="#">
+        <button className="dark-button scroll-up-button">SCROLL UP ↗</button>
+      </Link>
+      <AboutMe />
     </div>
   );
 }
@@ -111,4 +116,40 @@ function GridTile({src, alt} : {src: string, alt: string}) {
       <Image src={src} alt={alt} fill />
     </div>
   )
+}
+
+function AboutMe() {
+  return (
+    <div id="about-me" className="about-me-container">
+      <h3 className="section-head">
+        About {<ColouredText text="Me" backgroundColor="#E5E2F6" />}
+      </h3>
+      <hr className="solid-divider" />
+      <div className="about-me-content">
+        <div className="about-me-pic">
+          <Image src="/images/raksha-small.png" alt="Raksha" fill />
+        </div>
+        <div className="about-me-description">
+          <p>
+            I'm a 22 y/o CSE Graduate with strong passion for UI & UX Designing.
+            I’ve been designing for 2+ Years and currently work as a
+            Professional UX designer.
+          </p>
+          <p>
+            I believe that user experience design is a wonderful blend of
+            innovation and human psychology, and through my work, I have come to
+            understand the power of digital products paired with compassion and
+            empathy towards users. So far I have designed for domains like
+            Web3.0, Fintech, Agriculture, LMS, Logistics, AI-based Systems and
+            CRMs.
+          </p>
+          <p>
+            When I'm not designing, you can find me sketching zen art and
+            painting. I'm also a huge fan of dogs, documentaries, and design -
+            not necessarily in that order!
+          </p>
+        </div>
+      </div>
+    </div>
+  );
 }
