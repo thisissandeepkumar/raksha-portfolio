@@ -41,7 +41,7 @@ export default function RootLayout({
           />
           <ul className="nav-ul">
             <li>
-              <Link className="nav-li" href="#">
+              <Link className="nav-li" href="#my-projects">
                 MY PROJECTS
               </Link>
             </li>
@@ -66,7 +66,10 @@ export default function RootLayout({
               </Link>
             </li>
           </ul>
-          <Link href="https://drive.google.com/file/d/1mp_nRpDA44XLWsJkfrlpWJ1eqOSR7xtc/view?usp=sharing" target="_blank">
+          <Link
+            href="https://drive.google.com/file/d/1mp_nRpDA44XLWsJkfrlpWJ1eqOSR7xtc/view?usp=sharing"
+            target="_blank"
+          >
             <button className="dark-button">RESUME ↗</button>
           </Link>
         </nav>
