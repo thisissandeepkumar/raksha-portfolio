@@ -197,8 +197,8 @@
   }
 
   .card-image-content {
-    width: 400px;
-    height: 480px;
+    max-width: 330px;
+    height: 420px;
   }
 
   .numeric-container {

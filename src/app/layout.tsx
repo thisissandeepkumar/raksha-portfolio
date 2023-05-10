@@ -112,13 +112,15 @@ export default function RootLayout({
 function SocialBubble({icon} : {icon: string}) {
   return (
     <div className="social-bubble">
-      <Image
-        className="social-bubble-icon"
-        src={icon}
-        alt="Instagram"
-        width={40}
-        height={40}
-      />
+      <div className="social-bubble-icon">
+        <Image
+          src={icon}
+          alt="Instagram"
+          // width={40}
+          // height={40}
+          fill
+        />
+      </div>
     </div>
   );
 }

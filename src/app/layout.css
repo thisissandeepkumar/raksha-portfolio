@@ -95,7 +95,10 @@
 }
 
 .social-bubble-icon {
-  margin-top: 28px;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 30px 30px 30px 30px;
 }
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
@@ -120,10 +123,47 @@
     cursor: pointer;
   }
 
+  .main-footer {
+    height: 664px;
+  }
+
   .footer-routes {
+    height: 334px;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    align-content: center;
+  }
+
+  .contact-me {
+    font-size: 48px;
+  }
+
+  .contact-section {
+    width: 90vw;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .contact-details-title {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .contact-details-description {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .social-bubble {
+    width: 50px;
+    height: 50px;
+  }
+
+  .social-bubble-icon {
+    margin: 12.9px;
+    width: 25px;
+    height: 25px;
   }
 }
 
@@ -161,7 +201,9 @@
   }
 
   .social-bubble-icon {
-    margin-top: 15px;
+    width: 35px;
+    height: 35px;
+    margin: 18px;
   }
 }
 
