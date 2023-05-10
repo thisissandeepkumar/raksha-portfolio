@@ -56,6 +56,12 @@ nav {
   text-decoration: underline;
 }
 
+.solid-divider {
+  max-width: 90vw;
+  border-top: 2px solid #F2F2F2;
+  margin: 0px 144px 0px 144px;
+}
+
 @media screen and (min-width: 0px) and (max-width: 768px)  {
   .dark-button {
     font-size: 12;
