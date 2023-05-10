@@ -1,6 +1,7 @@
 import Image from "next/image";
 import localFont from "next/font/local"
 import "./home.css"
+import Link from "next/link";
 
 const broadsheetLdoFont = localFont({
   src: "./fonts/Broadsheet_LDO.ttf",
@@ -14,6 +15,9 @@ export default function Home() {
       <NumericalValuesCard />
       <MyProjects />
       <ProjectsGridView />
+      <button className="dark-button scroll-up-button">
+        <Link href="#">SCROLL UP ↗</Link>
+      </button>
     </div>
   );
 }
