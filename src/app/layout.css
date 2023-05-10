@@ -14,7 +14,7 @@
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
   .main-nav {
-    margin: 0px;
+    margin: 0 20px 0 20px;
   }
 
   .nav-ul {
@@ -37,7 +37,7 @@
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .main-nav {
-    margin: 0px 60px 0px 60px;
+    margin: 0px 55px 0px 55px;
     align-items: center;
   }
 
