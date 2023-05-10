@@ -21,6 +21,10 @@
     display: none;
   }
 
+  .nav-li {
+    display: none;
+  }
+
   .menu-icon {
     display: inline;
     align-self: center;
