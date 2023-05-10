@@ -74,7 +74,43 @@ export default function RootLayout({
           </Link>
         </nav>
         {children}
+        <footer className="main-footer">
+          <h2 className="contact-me">Contact Me</h2>
+          <div className="contact-section">
+            <div className="contact-details">
+              <span className="contact-details-title">Phone No. </span>
+              <span className="contact-details-description">
+                +91 879-249-1252
+              </span>
+            </div>
+            <div className="contact-details">
+              <span className="contact-details-title">Email </span>
+              <span className="contact-details-description">
+                rakshakaranth.s@gmail.com
+              </span>
+            </div>
+          </div>
+          <div className="social-handles">
+            <SocialBubble icon="/icons/instagram.svg" />
+            <SocialBubble icon="/icons/linkedin.svg" />
+            <SocialBubble icon="/icons/behance.svg" />
+          </div>
+        </footer>
       </body>
     </html>
+  );
+}
+
+function SocialBubble({icon} : {icon: string}) {
+  return (
+    <div className="social-bubble">
+      <Image
+        className="social-bubble-icon"
+        src={icon}
+        alt="Instagram"
+        width={40}
+        height={40}
+      />
+    </div>
   );
 }
