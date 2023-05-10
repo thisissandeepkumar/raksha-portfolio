@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
 
   return (
-    <html lang="en" style={{scrollBehavior: "smooth"}}>
+    <html lang="en" style={{ scrollBehavior: "smooth" }}>
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -46,7 +46,7 @@ export default function RootLayout({
               </Link>
             </li>
             <li>
-              <Link className="nav-li" href="#">
+              <Link className="nav-li" href="#about-me">
                 ABOUT ME
               </Link>
             </li>

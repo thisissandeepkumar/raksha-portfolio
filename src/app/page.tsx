@@ -18,6 +18,7 @@ export default function Home() {
       <Link href="#">
         <button className="dark-button scroll-up-button">SCROLL UP ↗</button>
       </Link>
+      <AboutMe />
     </div>
   );
 }
@@ -115,4 +116,15 @@ function GridTile({src, alt} : {src: string, alt: string}) {
       <Image src={src} alt={alt} fill />
     </div>
   )
+}
+
+function AboutMe() {
+  return (
+    <div id="about-me">
+      <h3 className="section-head">
+        About {<ColouredText text="Me" backgroundColor="#E5E2F6" />}
+      </h3>
+      <hr className="solid-divider" />
+    </div>
+  );
 }
