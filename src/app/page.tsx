@@ -12,6 +12,8 @@ export default function Home() {
     <div>
       <WelcomeCard />
       <NumericalValuesCard />
+      <MyProjects />
+      <ProjectsGridView />
     </div>
   );
 }
@@ -55,4 +57,58 @@ function InfoTile({value, description, color}: {value: string, description: stri
       </p>
     </div>
   );
+}
+
+function MyProjects() {
+  return (
+    <div id="my-projects">
+      <h3 className="section-head">
+        <ColouredText text="My" backgroundColor="#D1F3E1" /> Projects
+      </h3>
+    </div>
+  );
+}
+
+function ColouredText({text, backgroundColor} : {text: string, backgroundColor: string}) {
+  return (
+    <span
+      style={{
+        backgroundColor,
+        padding: "15px",
+      }}
+    >
+      {text}
+    </span>
+  );
+}
+
+function ProjectsGridView() {
+  return (
+    <div className="projects-grid">
+      <GridTile src="/images/targo.png" alt="Targo UI" />
+      <GridTile src="/images/avighna.png" alt="Avighna UI" />
+      <GridTile src="/images/wheresmy.png" alt="Where's My UI" />
+      <GridTile src="/images/seacutt.png" alt="SeaCutt UI" />
+      <GridTile src="/images/duepal.png" alt="DuePal UI" />
+      <GridTile src="/images/artpassion.png" alt="ArtPassion UI" />
+      <GridTile src="/images/upaz.png" alt="Upaz UI" />
+      <GridTile src="/images/aadhaar.png" alt="Aadhaar UI" />
+      <GridTile src="/images/tngo.png" alt="Trust N Go UI" />
+      <GridTile src="/images/edutech.png" alt="Edutech UI" />
+      <GridTile src="/images/trustensure.png" alt="Trust Ensure UI" />
+      <GridTile src="/images/anonymou.png" alt="Anonymous UI" />
+      <GridTile src="/images/crypto.png" alt="Crypto UI" />
+      <GridTile src="/images/ieesct.png" alt="IEEE SCT UI" />
+      <GridTile src="/images/edulog.png" alt="Edulog UI" />
+      <GridTile src="/images/diary.png" alt="Diary UI" />
+    </div>
+  );
+}
+
+function GridTile({src, alt} : {src: string, alt: string}) {
+  return (
+    <div className="projects-grid-tile">
+      <Image src={src} alt={alt} fill />
+    </div>
+  )
 }
