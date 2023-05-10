@@ -29,8 +29,8 @@ function WelcomeCard() {
         <Image
           src="/images/raksha.png"
           alt="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV3qnIImwUBUIdIH8nYCtycbzK3vwaFnKKIOQQaa7R&s"
-          width={473}
-          height={560}
+          width={472}
+          height={550}
         />
       </div>
     </div>
