@@ -104,8 +104,29 @@
 }
 
 .solid-divider {
-  border-top: 3px solid #040404;
+  border-top: 2px solid ##F2F2F2;
   margin: 0px 144px 0px 144px;
+}
+
+.about-me-content {
+  margin: 18px 118px 0px 118px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.about-me-pic {
+  position: relative;
+  width: 355px;
+  height: 252px;
+}
+
+.about-me-description {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26.8px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1080px) {
@@ -131,6 +152,12 @@
 
   .card-image-content {
     align-self: center;
+  }
+
+  .about-me-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -175,5 +202,11 @@
   .projects-grid-tile {
     width: 80vw;
     height: 80vw;
+  }
+
+  .about-me-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
