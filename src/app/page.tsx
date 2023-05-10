@@ -21,7 +21,7 @@ function WelcomeCard() {
     <div className="card-content">
       <div className="welcome-card-text-content">
         <p className="welcome-1">Hey, I'm Raksha 👋</p>
-        <p className={`${broadsheetLdoFont.variable} welcome-2`}>
+        <p className={`welcome-2`}>
           Welcome to My UI & UX Design Portfolio
         </p>
       </div>
@@ -29,8 +29,6 @@ function WelcomeCard() {
         <Image
           src="/images/raksha.png"
           alt="Image of Raksha"
-          // width={472}
-          // height={550}
           fill
         />
       </div>
