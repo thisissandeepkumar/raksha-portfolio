@@ -12,6 +12,7 @@ export default function Home() {
     <div>
       <WelcomeCard />
       <NumericalValuesCard />
+      <MyProjects />
     </div>
   );
 }
@@ -54,5 +55,28 @@ function InfoTile({value, description, color}: {value: string, description: stri
         {description}
       </p>
     </div>
+  );
+}
+
+function MyProjects() {
+  return (
+    <div id="my-projects">
+      <h3 className="section-head">
+        <ColouredText text="My" backgroundColor="#D1F3E1" /> Projects
+      </h3>
+    </div>
+  );
+}
+
+function ColouredText({text, backgroundColor} : {text: string, backgroundColor: string}) {
+  return (
+    <span
+      style={{
+        backgroundColor,
+        padding: "15px",
+      }}
+    >
+      {text}
+    </span>
   );
 }
