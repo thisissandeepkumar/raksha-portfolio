@@ -81,6 +81,21 @@
   font-weight: 500;
 }
 
+.projects-grid {
+  margin: 0px 25px 0px 25px;
+  padding: 0px 25px 0px 25px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 25px;
+  row-gap: 25px;
+}
+
+.projects-grid-tile {
+  position: relative;
+  width: 28vw;
+  height: 28vw;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1080px) {
 
   .card-content {
