@@ -99,7 +99,7 @@
 .scroll-up-button {
   position: absolute;
   right: 0;
-  margin: 0px 25px 0px 25px;
+  margin: 25px 25px 20px 25px;
   color: white;
 }
 

@@ -1,12 +1,6 @@
 import Image from "next/image";
-import localFont from "next/font/local"
 import "./home.css"
 import Link from "next/link";
-
-const broadsheetLdoFont = localFont({
-  src: "./fonts/Broadsheet_LDO.ttf",
-  variable: "--font-broadsheet-ldo"
-})
 
 export default function Home() {
   return (
