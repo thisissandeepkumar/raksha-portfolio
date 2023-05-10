@@ -120,7 +120,7 @@ function GridTile({src, alt} : {src: string, alt: string}) {
 
 function AboutMe() {
   return (
-    <div id="about-me">
+    <div id="about-me" className="about-me-container">
       <h3 className="section-head">
         About {<ColouredText text="Me" backgroundColor="#E5E2F6" />}
       </h3>
