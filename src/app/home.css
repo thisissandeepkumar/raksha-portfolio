@@ -234,6 +234,52 @@
   text-align: justify;
 }
 
+.awards-section-container {
+  height: 737px;
+  background-color: #F8F0E2;
+  padding: 68px 0 64px 0;
+}
+
+.awards-section-content {
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.awards-card {
+  max-width: 36vw;
+  align-items: center;
+  margin: 0 32px 0;
+}
+
+.awards-card:nth-child(1) {
+  margin: 0 32px 0 144px;
+} 
+
+.awards-image {
+  width: 36vw;
+  height: 30vw;
+  position: relative;
+}
+
+.awards-title {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29.05px;
+  margin: 0;
+}
+
+.awards-description {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.78px;
+  color: #7A7A7A;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1080px) {
 
   .card-content {

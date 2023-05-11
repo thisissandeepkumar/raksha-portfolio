@@ -16,6 +16,7 @@ export default function Home() {
       <AboutMe />
       <MySkills />
       <MyHobbiesSection />
+      <MyAwards />
     </div>
   );
 }
@@ -247,6 +248,57 @@ function MyHobbiesSection() {
           </div>
         </div>
       </div>
+    </div>
+  );
+}
+
+function MyAwards() {
+  return (
+    <div className="awards-section-container">
+      <h3 className="section-head">My Awards And Achievements</h3>
+      <div className="awards-section-content">
+        <AwardsCard
+          imageSrc="/images/smartindia-hackathon-2022.png"
+          title="2nd Prize | Smart India Hackathon 2022"
+          description="Issued by AICTE · Aug 2022"
+        />
+        <AwardsCard
+          imageSrc="/images/aadhaar-hackathon.png"
+          title="3rd Prize | Aadhaar Hackathon 2021"
+          description="Issued by UIDAI (Unique Identification Authority of India) · Nov 2021"
+        />
+        <AwardsCard
+          imageSrc="/images/ieee-hackathon.png"
+          title='2nd Prize | "U, I & X" - UX Designathon'
+          description="Issued by IEEE · Oct 2021"
+        />
+        <AwardsCard
+          imageSrc="/images/hackbout.png"
+          title="1st Prize | Hackbout 2.0"
+          description="Issued by Hack Club NMIT · Jun 2021"
+        />
+        <AwardsCard
+          imageSrc="/images/smart-india-hackathon.png"
+          title="1st Prize | Smart India Hackathon 2019"
+          description="Issued by Ministry of Civil Aviation · Mar 2019"
+        />
+      </div>
+    </div>
+  );
+}
+
+function AwardsCard({imageSrc, title, description}: {imageSrc: string, title: string, description: string}) {
+  return (
+    <div className="awards-card">
+      <div className="awards-image">
+        <Image
+          src={imageSrc}
+          alt="Smart India Hackathon 2022 Winners"
+          fill
+        />
+      </div>
+      <p className="awards-title">{title}</p>
+      <p className="awards-description">{description}</p>
     </div>
   );
 }
