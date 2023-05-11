@@ -18,6 +18,7 @@ export default function Home() {
       <MyHobbiesSection />
       <MyAwards />
       <MyBlogs />
+      <BuyMeACoffee />
     </div>
   );
 }
@@ -347,6 +348,29 @@ function MyBlogs() {
       <h3 className="section-head">
         <ColouredText text="My" backgroundColor="#FCEBF2" /> Blogs
       </h3>
+    </div>
+  );
+}
+
+function BuyMeACoffee() {
+  return (
+    <div className="buy-coffee-container">
+      <h3 className="section-head">Buy me a ☕</h3>
+      <hr className="section-head-underline" />
+      <div>
+        <div>
+          <p>$</p>
+          <p>
+            Did you enjoy my work? Make a small donation to support me as a
+            designer
+          </p>
+        </div>
+        <div>
+          <Link href="https://www.w3schools.com/css/css_margin.asp" target="_blank">
+            <button className="dark-button">BUY ME A COFFEE ↗</button>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }
