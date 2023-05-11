@@ -258,6 +258,18 @@ function MyAwards() {
       <h3 className="section-head">My Awards And Achievements</h3>
       <div className="awards-section-content">
         <AwardsCard
+          imageSrc="/images/push-protocol.png"
+          secondaryImage="/images/ethforall-winners.png"
+          title="Winners for 'Best use of Push Protocol' | ETHforall 2023"
+          description="Issued by ETHIndia Online Series · Feb 2023Issued by ETHIndia Online Series · Feb 2023"
+        />
+        <AwardsCard
+          imageSrc="/images/filecoin-1.png"
+          secondaryImage="/images/filecoin-2.png"
+          title="1st Prize for 'Polygon' | 3rd Prize for 'Filecoin' | ETHOdyssey"
+          description="Issued by ETHIndia · Aug 2021"
+        />
+        <AwardsCard
           imageSrc="/images/smartindia-hackathon-2022.png"
           title="2nd Prize | Smart India Hackathon 2022"
           description="Issued by AICTE · Aug 2022"
@@ -287,16 +299,41 @@ function MyAwards() {
   );
 }
 
-function AwardsCard({imageSrc, title, description}: {imageSrc: string, title: string, description: string}) {
+function AwardsCard({
+  imageSrc,
+  title,
+  description,
+  secondaryImage,
+}: {
+  imageSrc: string;
+  title: string;
+  description: string;
+  secondaryImage?: string;
+}) {
   return (
     <div className="awards-card">
-      <div className="awards-image">
-        <Image
-          src={imageSrc}
-          alt="Smart India Hackathon 2022 Winners"
-          fill
-        />
-      </div>
+      {secondaryImage ? (
+        <div className="awards-image">
+          <div className="awards-image-1">
+            <Image
+              src={imageSrc}
+              alt="Smart India Hackathon 2022 Winners"
+              fill
+            />
+          </div>
+          <div className="awards-image-2">
+            <Image
+              src={secondaryImage}
+              alt="Smart India Hackathon 2022 Winners"
+              fill
+            />
+          </div>
+        </div>
+      ) : (
+        <div className="awards-image">
+          <Image src={imageSrc} alt="Smart India Hackathon 2022 Winners" fill />
+        </div>
+      )}
       <p className="awards-title">{title}</p>
       <p className="awards-description">{description}</p>
     </div>
