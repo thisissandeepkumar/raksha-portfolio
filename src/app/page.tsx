@@ -14,6 +14,7 @@ export default function Home() {
         <button className="dark-button scroll-up-button">SCROLL UP ↗</button>
       </Link>
       <AboutMe />
+      <MySkills />
     </div>
   );
 }
@@ -143,6 +144,33 @@ function AboutMe() {
             painting. I'm also a huge fan of dogs, documentaries, and design -
             not necessarily in that order!
           </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function MySkills() {
+  return (
+    <div className="skills-section">
+      <h3 className="section-head">My Skills & Tools</h3>
+      <MySkillsContentCard />
+    </div>
+  );
+}
+
+function MySkillsContentCard() {
+  return (
+    <div>
+      <div className="skills-section-box">
+        <div className="skills-title">
+          <h3>Skills</h3>
+        </div>
+        <div>
+          <div>
+            <h4>Visual Design</h4>
+            <p>Advanced</p>
+          </div>
         </div>
       </div>
     </div>
