@@ -17,6 +17,7 @@ export default function Home() {
       <MySkills />
       <MyHobbiesSection />
       <MyAwards />
+      <MyBlogs />
     </div>
   );
 }
@@ -336,6 +337,16 @@ function AwardsCard({
       )}
       <p className="awards-title">{title}</p>
       <p className="awards-description">{description}</p>
+    </div>
+  );
+}
+
+function MyBlogs() {
+  return (
+    <div>
+      <h3 className="section-head">
+        <ColouredText text="My" backgroundColor="#FCEBF2" /> Blogs
+      </h3>
     </div>
   );
 }
