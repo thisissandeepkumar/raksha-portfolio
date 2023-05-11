@@ -15,6 +15,7 @@ export default function Home() {
       </Link>
       <AboutMe />
       <MySkills />
+      <MyHobbiesSection />
     </div>
   );
 }
@@ -197,6 +198,55 @@ function MySkillsContentGridItem({title, level}: {title: string, level: string})
     <div className="skills-description-tile">
       <h4 className="skills-description-title">{title}</h4>
       <p className="skills-description-level">{level}</p>
+    </div>
+  );
+}
+
+function MyHobbiesSection() {
+  return (
+    <div className="hobbies-section">
+      <h3 className="section-head">My Hobbies</h3>
+      <div className="hobbies-container">
+        <div className="hobbies-card">
+          <div className="hobbies-image">
+            <Image src="/images/zen.png" alt="Zen" fill />
+          </div>
+          <div>
+            <h4 className="hobby-title">Zen Art is my therapy</h4>
+            <p className="hobby-description">
+              I’ve always loved art. It helps me channelise my thoughts and
+              keeps my creative juices flowing. I create pencil sketches and zen
+              art.
+            </p>
+          </div>
+        </div>
+        <div className="hobbies-card">
+          <div className="hobbies-image">
+            <Image src="/images/zen.png" alt="Zen" fill />
+          </div>
+          <div>
+            <h4 className="hobby-title">Zen Art is my therapy</h4>
+            <p className="hobby-description">
+              I’ve always loved art. It helps me channelise my thoughts and
+              keeps my creative juices flowing. I create pencil sketches and zen
+              art.
+            </p>
+          </div>
+        </div>
+        <div className="hobbies-card">
+          <div className="hobbies-image">
+            <Image src="/images/zen.png" alt="Zen" fill />
+          </div>
+          <div>
+            <h4 className="hobby-title">Zen Art is my therapy</h4>
+            <p className="hobby-description">
+              I’ve always loved art. It helps me channelise my thoughts and
+              keeps my creative juices flowing. I create pencil sketches and zen
+              art.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
