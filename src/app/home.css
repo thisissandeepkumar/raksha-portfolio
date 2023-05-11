@@ -142,7 +142,7 @@
   align-items: center;
 }
 
-.skills-title {
+.skills-title-container {
   width: 30%;
   height: auto;
 }
@@ -158,6 +158,19 @@
 
 .skills-description-tile {
   height: 85px;
+}
+
+.skills-title {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38.73px;
+  display: inline-table;
+}
+
+.skills-title-underline {
+  background-color: #D1F3E1;
+  display: inline-flex;
 }
 
 .skills-description-title {
@@ -216,6 +229,12 @@
   .about-me-pic {
     min-width: 80vw;
     min-height: 80vw;
+  }
+
+  .skills-section-box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
   }
 }
 
@@ -280,5 +299,18 @@
 
   .about-me-description {
     min-width: 80vw;
+  }
+
+  .skills-section-box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .skills-description-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 }

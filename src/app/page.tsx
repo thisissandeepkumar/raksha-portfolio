@@ -163,8 +163,8 @@ function MySkillsContentCard() {
   return (
     <div>
       <div className="skills-section-box">
-        <div className="skills-title">
-          <h3>Skills</h3>
+        <div className="skills-title-container">
+          <MySkillsTitle title="Skills" color="#D1F3E1" />
         </div>
         <div className="skills-description-section">
           <MySkillsContentGridItem title="Visual Design" level="Advanced" />
@@ -181,6 +181,14 @@ function MySkillsContentCard() {
         </div>
       </div>
     </div>
+  );
+}
+
+function MySkillsTitle({title, color}: {title: string, color: string}) {
+  return (
+    <span className="skills-title-underline">
+      <h3 className="skills-title">{title}</h3>
+    </span>
   );
 }
 
