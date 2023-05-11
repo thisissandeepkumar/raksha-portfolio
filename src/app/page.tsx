@@ -166,13 +166,29 @@ function MySkillsContentCard() {
         <div className="skills-title">
           <h3>Skills</h3>
         </div>
-        <div>
-          <div>
-            <h4>Visual Design</h4>
-            <p>Advanced</p>
-          </div>
+        <div className="skills-description-section">
+          <MySkillsContentGridItem title="Visual Design" level="Advanced" />
+          <MySkillsContentGridItem title="Wire-framing" level="Advanced" />
+          <MySkillsContentGridItem
+            title="Information Architecture"
+            level="Advanced"
+          />
+          <MySkillsContentGridItem title="Product Strategy" level="Advanced" />
+          <MySkillsContentGridItem title="Prototyping" level="Advanced" />
+          <MySkillsContentGridItem title="Collaboration" level="Advanced" />
+          <MySkillsContentGridItem title="Accessibility Design" level="Basic" />
+          <MySkillsContentGridItem title="Usability Testing" level="Basic" />
         </div>
       </div>
+    </div>
+  );
+}
+
+function MySkillsContentGridItem({title, level}: {title: string, level: string}) {
+  return (
+    <div className="skills-description-tile">
+      <h4 className="skills-description-title">{title}</h4>
+      <p className="skills-description-level">{level}</p>
     </div>
   );
 }
