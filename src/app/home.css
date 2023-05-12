@@ -346,6 +346,11 @@
   margin: 0 15px 0 15px;
 }
 
+.design-process-container {
+  height: 604px;
+  background: linear-gradient(180deg, #E5E2F6 50%, white 50%);
+}
+
 @media screen and (min-width: 768px) and (max-width: 1080px) {
 
   .card-content {

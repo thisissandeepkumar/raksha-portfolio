@@ -14,6 +14,7 @@ export default function Home() {
         <button className="dark-button scroll-up-button">SCROLL UP ↗</button>
       </Link>
       <AboutMe />
+      <MyDesignProcess />
       <MySkills />
       <MyHobbiesSection />
       <MyAwards />
@@ -376,4 +377,12 @@ function BuyMeACoffee() {
       </div>
     </div>
   );
+}
+
+function MyDesignProcess() {
+  return (
+    <div className="design-process-container">
+      <h3 className="section-head">My Design Process</h3>
+    </div>
+  )
 }
