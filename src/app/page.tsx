@@ -382,7 +382,52 @@ function BuyMeACoffee() {
 function MyDesignProcess() {
   return (
     <div className="design-process-container">
-      <h3 className="section-head">My Design Process</h3>
+      <h3 className="section-head buy-coffee-heading">My Design Process</h3>
+      <div className="design-process-inner-grid">
+        <MyDesignProcessCard
+          image="/icons/notebook.svg"
+          description="Understand the Requirement"
+        />
+        <MyDesignProcessCard
+          image="/icons/lens.svg"
+          description="Do User & Market Research"
+        />
+        <MyDesignProcessCard
+          image="/icons/user.svg"
+          description="Analyse & Empathise with User"
+        />
+        <MyDesignProcessCard
+          image="/icons/bulb.svg"
+          description="Ideate a Design Concept"
+        />
+        <MyDesignProcessCard
+          image="/icons/rocket.svg"
+          description="Update & Launch"
+        />
+        <MyDesignProcessCard
+          image="/icons/ab.svg"
+          description="Prototype & Test"
+        />
+        <MyDesignProcessCard
+          image="/icons/ddd.svg"
+          description="Design, Design & Design!"
+        />
+        <MyDesignProcessCard
+          image="/icons/sketch.svg"
+          description="Sketching and Wireframing"
+        />
+      </div>
     </div>
-  )
+  );
+}
+
+function MyDesignProcessCard({image, description} : {image: string, description: string}) {
+  return (
+    <div className="design-process-card">
+      <div className="design-process-image">
+        <Image src={image} alt="Notebook" fill />
+      </div>
+      <p className="design-process-description">{description}</p>
+    </div>
+  );
 }

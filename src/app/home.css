@@ -347,8 +347,43 @@
 }
 
 .design-process-container {
-  height: 604px;
+  height: 520px;
   background: linear-gradient(180deg, #E5E2F6 50%, white 50%);
+  padding: 87px 0 0 0;
+}
+
+.design-process-inner-grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  row-gap: 18px;
+  margin: 64px 5vw 0 5vw;
+}
+
+.design-process-card {
+  width: 16vw;
+  height: auto;
+  background-color: white;
+  box-shadow: 0px 9px 18px rgba(165, 143, 193, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.design-process-image {
+  position: relative;
+  width: 55.75px;
+  height: 57.39px;
+}
+
+.design-process-description {
+  color: #040404;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.78px;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1080px) {
@@ -539,5 +574,32 @@
 
   .buy-coffee-description {
     margin: 0 0 32px 0;
+  }
+
+  .design-process-container {
+    height: auto;
+  }
+
+  .design-process-inner-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .design-process-card {
+    width: 75vw;
+    height: 35vw;
+  }
+
+  .design-process-image {
+    width: 20%;
+    height: 45%;
+  }
+
+  .design-process-description {
+    font-weight: 400;
+    font-size: 4vw;
+    line-height: 16.94px;
   }
 }
