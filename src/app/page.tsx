@@ -113,10 +113,19 @@ function ProjectsGridView() {
 
 function GridTile({src, alt} : {src: string, alt: string}) {
   return (
-    <div className="projects-grid-tile">
-      <Image src={src} alt={alt} fill />
+    <div className="outer-projects-tile">
+      <div className="projects-grid-tile">
+        <div className="projects-image">
+          <Image src={src} alt={alt} fill />
+        </div>
+      </div>
+      <div className="projects-image-overlay">
+        <div className="projects-image-overlay-center">
+          <button className="dark-button ob">View Projects</button>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
 function AboutMe() {
