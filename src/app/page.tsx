@@ -91,40 +91,46 @@ function ColouredText({text, backgroundColor} : {text: string, backgroundColor: 
 function ProjectsGridView() {
   return (
     <div className="projects-grid">
-      <GridTile src="/images/targo.png" alt="Targo UI" />
-      <GridTile src="/images/avighna.png" alt="Avighna UI" />
-      <GridTile src="/images/wheresmy.png" alt="Where's My UI" />
-      <GridTile src="/images/seacutt.png" alt="SeaCutt UI" />
-      <GridTile src="/images/duepal.png" alt="DuePal UI" />
-      <GridTile src="/images/artpassion.png" alt="ArtPassion UI" />
-      <GridTile src="/images/upaz.png" alt="Upaz UI" />
-      <GridTile src="/images/aadhaar.png" alt="Aadhaar UI" />
-      <GridTile src="/images/tngo.png" alt="Trust N Go UI" />
-      <GridTile src="/images/edutech.png" alt="Edutech UI" />
-      <GridTile src="/images/trustensure.png" alt="Trust Ensure UI" />
-      <GridTile src="/images/anonymou.png" alt="Anonymous UI" />
-      <GridTile src="/images/crypto.png" alt="Crypto UI" />
-      <GridTile src="/images/ieesct.png" alt="IEEE SCT UI" />
-      <GridTile src="/images/edulog.png" alt="Edulog UI" />
-      <GridTile src="/images/diary.png" alt="Diary UI" />
+      <GridTile src="/images/targo.png" alt="Targo UI" id="targo" />
+      <GridTile src="/images/avighna.png" alt="Avighna UI" id="targo" />
+      <GridTile src="/images/wheresmy.png" alt="Where's My UI" id="targo" />
+      <GridTile src="/images/seacutt.png" alt="SeaCutt UI" id="targo" />
+      <GridTile src="/images/duepal.png" alt="DuePal UI" id="targo" />
+      <GridTile src="/images/artpassion.png" alt="ArtPassion UI" id="targo" />
+      <GridTile src="/images/upaz.png" alt="Upaz UI" id="targo" />
+      <GridTile src="/images/aadhaar.png" alt="Aadhaar UI" id="targo" />
+      <GridTile src="/images/tngo.png" alt="Trust N Go UI" id="targo" />
+      <GridTile src="/images/edutech.png" alt="Edutech UI" id="targo" />
+      <GridTile
+        src="/images/trustensure.png"
+        alt="Trust Ensure UI"
+        id="targo"
+      />
+      <GridTile src="/images/anonymou.png" alt="Anonymous UI" id="targo" />
+      <GridTile src="/images/crypto.png" alt="Crypto UI" id="targo" />
+      <GridTile src="/images/ieesct.png" alt="IEEE SCT UI" id="targo" />
+      <GridTile src="/images/edulog.png" alt="Edulog UI" id="targo" />
+      <GridTile src="/images/diary.png" alt="Diary UI" id="targo" />
     </div>
   );
 }
 
-function GridTile({src, alt} : {src: string, alt: string}) {
+function GridTile({src, alt, id} : {src: string, alt: string, id: string}) {
   return (
-    <div className="outer-projects-tile">
-      <div className="projects-grid-tile">
-        <div className="projects-image">
-          <Image src={src} alt={alt} fill />
+    <Link href={`/projects/${id}`}>
+      <div className="outer-projects-tile">
+        <div className="projects-grid-tile">
+          <div className="projects-image">
+            <Image src={src} alt={alt} fill />
+          </div>
+        </div>
+        <div className="projects-image-overlay">
+          <div className="projects-image-overlay-center">
+            <button className="dark-button ob">View Projects</button>
+          </div>
         </div>
       </div>
-      <div className="projects-image-overlay">
-        <div className="projects-image-overlay-center">
-          <button className="dark-button ob">View Projects</button>
-        </div>
-      </div>
-    </div>
+    </Link>
   );
 }
 
