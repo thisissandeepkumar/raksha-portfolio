@@ -75,6 +75,21 @@ export default function ProjectPage({ params }: { params: { project: string } })
           <Image src={project.projectImage} alt={project.projectImage} fill />
         </div>
       </div>
+      <hr className={styles.sectionDivisionLine} />
+      <div className={`${styles.alignment}`}>
+        <h3 className={`${styles.contentHeading} ${styles.zmzp}`}>
+          Project Scope:
+        </h3>
+        <p className={styles.textContent}>{project.projectScope}</p>
+      </div>
+      <div className={`${styles.alignment}`}>
+        <h3 className={`${styles.contentHeading} ${styles.zmzp}`}>
+          Project Goals
+        </h3>
+        <ul>{project.projectGoals.map((goal: string) => (
+          <li className={styles.textContent}>{goal}</li>
+        ))}</ul>
+      </div>
     </div>
   );
 }

@@ -105,3 +105,14 @@
   font-size: 18px;
   line-height: 21.6px;
 }
+
+.sectionDivisionLine {
+  margin: 32px 104px;
+}
+
+.contentHeading {
+  font-family: "Inter" sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38.4px;
+}
