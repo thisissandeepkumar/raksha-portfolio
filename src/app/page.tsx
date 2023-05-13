@@ -99,7 +99,7 @@ function ProjectsGridView() {
       <GridTile src="/images/artpassion.png" alt="ArtPassion UI" id="targo" />
       <GridTile src="/images/upaz.png" alt="Upaz UI" id="targo" />
       <GridTile src="/images/aadhaar.png" alt="Aadhaar UI" id="targo" />
-      <GridTile src="/images/tngo.png" alt="Trust N Go UI" id="targo" />
+      <GridTile src="/images/tngo.png" alt="Trust N Go UI" id="trustngo" />
       <GridTile src="/images/edutech.png" alt="Edutech UI" id="targo" />
       <GridTile
         src="/images/trustensure.png"
