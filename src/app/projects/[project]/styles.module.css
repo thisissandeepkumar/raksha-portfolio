@@ -116,3 +116,11 @@
   font-size: 32px;
   line-height: 38.4px;
 }
+
+.mobileInterface {
+  background-color: #F8F8F8;
+  height: 566px;
+  margin: 0;
+  width: 100vw;
+  padding: 42px 106px;
+}

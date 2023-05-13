@@ -86,9 +86,40 @@ export default function ProjectPage({ params }: { params: { project: string } })
         <h3 className={`${styles.contentHeading} ${styles.zmzp}`}>
           Project Goals
         </h3>
-        <ul>{project.projectGoals.map((goal: string) => (
-          <li className={styles.textContent}>{goal}</li>
-        ))}</ul>
+        <ul>
+          {project.projectGoals.map((goal: string) => (
+            <li className={styles.textContent}>{goal}</li>
+          ))}
+        </ul>
+      </div>
+      <div className={`${styles.alignment}`}>
+        <h3 className={styles.contentHeading}>Visual Design</h3>
+      </div>
+      <div className={`${styles.alignment}`}>
+        <h3 className={styles.contentHeading}>Design Approach</h3>
+        <ul>
+          {project.designApproach.map((approach: string) => (
+            <li className={styles.textContent}>{approach}</li>
+          ))}
+        </ul>
+      </div>
+      <div className={`${styles.alignment}`}>
+        <h3 className={styles.contentHeading}>Tools Used:</h3>
+        <p className={`${styles.textContent}`}>{project.toolsUsed}</p>
+      </div>
+      <div className={`${styles.mobileInterface}`}>
+        <div className={`${styles.alignment}`}>
+          <h3 className={styles.contentHeading}>Mobile User Interfaces</h3>
+        </div>
+      </div>
+      <div className={`${styles.mobileInterface}`}>
+        <div className={`${styles.alignment}`}>
+          <h3 className={styles.contentHeading}>Web User Interfaces</h3>
+        </div>
+      </div>
+      <div className={`${styles.alignment}`}>
+        <h3 className={styles.contentHeading}>Results:</h3>
+        <p className={styles.textContent}>{project.results}</p>
       </div>
     </div>
   );
