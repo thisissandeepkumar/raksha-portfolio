@@ -30,12 +30,40 @@
   margin: 16px 106px 16px 106px;
 }
 
+.zmzp {
+  margin: 0;
+  padding: 0;
+}
+
 .mainTitle {
   font-family: "Broadsheet";
   font-size: 44px;
   font-weight: 400;
   line-height: 52.8px;
   text-decoration: underline;
+}
+
+.projectOverviewBox {
+  margin: 0 25px 0 0;
+}
+
+.labelsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.responsiveRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.projectImage {
+  min-width: 28vw;
+  min-height: 28vw;
+  position: relative;
 }
 
 .labels {
@@ -48,4 +76,32 @@
 
 .labels:nth-child(1) {
   margin-left: 0;
+}
+
+.textContent {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.projectDetailsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.projectValue {
+  font-family: "Inter" sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 33.6px;
+}
+
+.projectSubheading {
+  font-family: "Inter" sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.6px;
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import styles from "./styles.module.css"
 
 const projectData = [
@@ -50,16 +51,39 @@ export default function ProjectPage({ params }: { params: { project: string } })
 
   return (
     <div>
-      <div className={`${styles.alignment}`}>
-        <h3 className={`${styles.mainTitle}`}>{project.mainTitle}</h3>
-        <div>
-          {project.labels.map((label: string) => (
-            <span className={`${styles.labels}`}>
-              {label}
-            </span>
-          ))}
+      <div className={`${styles.alignment} ${styles.responsiveRow}`}>
+        <div className={styles.projectOverviewBox}>
+          <h3 className={`${styles.mainTitle} ${styles.zmzp}`}>
+            {project.mainTitle}
+          </h3>
+          <div className={`${styles.labelsContainer}`}>
+            {project.labels.map((label: string) => (
+              <span className={`${styles.labels}`}>{label}</span>
+            ))}
+          </div>
+          <p className={`${styles.textContent}`}>{project.description}</p>
+          <div className={styles.projectDetailsContainer}>
+            <ProjectDetails
+              value={project.duration}
+              subheading="Project Duration"
+            />
+            <ProjectDetails value={project.screens} subheading="UI Screens" />
+            <ProjectDetails value={project.role} subheading="My Role" />
+          </div>
+        </div>
+        <div className={styles.projectImage}>
+          <Image src={project.projectImage} alt={project.projectImage} fill />
         </div>
       </div>
+    </div>
+  );
+}
+
+function ProjectDetails({ value, subheading }: { value: string, subheading: string }) {
+  return (
+    <div>
+      <p className={`${styles.projectValue} ${styles.zmzp}`}>{value}</p>
+      <p className={`${styles.projectSubheading} ${styles.zmzp}`}>{subheading}</p>
     </div>
   );
 }
