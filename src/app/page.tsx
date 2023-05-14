@@ -241,27 +241,24 @@ function MyHobbiesSection() {
         </div>
         <div className="hobbies-card">
           <div className="hobbies-image">
-            <Image src="/images/zen.png" alt="Zen" fill />
+            <Image src="/images/dog-lover.png" alt="Dog Lover" fill />
           </div>
           <div>
-            <h4 className="hobby-title">Zen Art is my therapy</h4>
+            <h4 className="hobby-title">Dog Lover</h4>
             <p className="hobby-description">
-              I’ve always loved art. It helps me channelise my thoughts and
-              keeps my creative juices flowing. I create pencil sketches and zen
-              art.
+              My love for dogs is beyond this world. I absolutely love spending
+              time with these furry beings.
             </p>
           </div>
         </div>
         <div className="hobbies-card">
           <div className="hobbies-image">
-            <Image src="/images/zen.png" alt="Zen" fill />
+            <Image src="/images/anime-fan.png" alt="Anime Fan" fill />
           </div>
           <div>
-            <h4 className="hobby-title">Zen Art is my therapy</h4>
+            <h4 className="hobby-title">Anime Fan</h4>
             <p className="hobby-description">
-              I’ve always loved art. It helps me channelise my thoughts and
-              keeps my creative juices flowing. I create pencil sketches and zen
-              art.
+              I really enjoy watching anime in my spare time.
             </p>
           </div>
         </div>
