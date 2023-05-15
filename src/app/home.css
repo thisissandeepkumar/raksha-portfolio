@@ -450,7 +450,7 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  max-height: 22vw;
+  height: 22vw;
 }
 
 .blog-card-thumbnail {
@@ -563,6 +563,26 @@
 
   .buy-coffee-description {
     margin: 0 0 32px 0;
+  }
+
+  .blogs-section {
+    margin: 0 64px;
+  }
+
+  .blog-card {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .blog-card-div {
+    padding: 42px 0;
+  }
+
+  .blog-card-thumbnail {
+    min-width: 80vw;
+    min-height: 40vw;
+    margin-right: 0;
+    margin-bottom: 20px;
   }
 }
 
@@ -699,5 +719,35 @@
     font-weight: 400;
     font-size: 4vw;
     line-height: 16.94px;
+  }
+
+  .blogs-section {
+    margin: 0 64px;
+  }
+
+  .blog-card {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .blog-card-div {
+    padding: 42px 0;
+  }
+
+  .blog-card-thumbnail {
+    min-width: 80vw;
+    min-height: 40vw;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .blog-title {
+    font-weight: 700;
+    font-size: 18px;
+    text-align: justify;
+  } 
+
+  .blog-published {
+    font-size: 16px;
   }
 }

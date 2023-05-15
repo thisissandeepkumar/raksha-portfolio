@@ -2,8 +2,6 @@ import Image from "next/image";
 import "./home.css"
 import "./globals.css"
 import Link from "next/link";
-import axios from "axios";
-import type { GetServerSideProps, InferGetServerSidePropsType } from "next";
 
 type Data = [
   {
