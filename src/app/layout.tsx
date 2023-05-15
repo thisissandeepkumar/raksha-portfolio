@@ -108,7 +108,6 @@ export default function RootLayout({
             <SocialBubble icon="/icons/behance.svg" />
           </div>
         </footer>
-        <script src="https://www.retainable.io/assets/retainable/rss-embed/retainable-rss-embed.js"></script>
       </body>
     </html>
   );

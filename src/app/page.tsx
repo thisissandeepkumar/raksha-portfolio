@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import "./home.css"
 import "./globals.css"
@@ -122,25 +124,25 @@ function ProjectsGridView() {
   return (
     <div className="projects-grid">
       <GridTile src="/images/targo.png" alt="Targo UI" id="targo" />
-      <GridTile src="/images/avighna.png" alt="Avighna UI" id="targo" />
-      <GridTile src="/images/wheresmy.png" alt="Where's My UI" id="targo" />
-      <GridTile src="/images/seacutt.png" alt="SeaCutt UI" id="targo" />
-      <GridTile src="/images/duepal.png" alt="DuePal UI" id="targo" />
-      <GridTile src="/images/artpassion.png" alt="ArtPassion UI" id="targo" />
-      <GridTile src="/images/upaz.png" alt="Upaz UI" id="targo" />
-      <GridTile src="/images/aadhaar.png" alt="Aadhaar UI" id="targo" />
-      <GridTile src="/images/tngo.png" alt="Trust N Go UI" id="trustngo" />
-      <GridTile src="/images/edutech.png" alt="Edutech UI" id="targo" />
+      <GridTile src="/images/avighna.png" alt="Avighna UI" id="avighna" />
+      <GridTile src="/images/wheresmy.png" alt="Where's My UI" id="wheresmy" />
+      <GridTile src="/images/seacutt.png" alt="SeaCutt UI" id="seacutt" />
+      <GridTile src="/images/duepal.png" alt="DuePal UI" id="duepal" />
+      <GridTile src="/images/artpassion.png" alt="ArtPassion UI" id="artpassion" />
+      <GridTile src="/images/upaz.png" alt="Upaz UI" id="upaz" />
+      <GridTile src="/images/aadhaar.png" alt="Aadhaar UI" id="aadhaar" />
+      <GridTile src="/images/tngo.png" alt="Trust N Go UI" id="tngo" />
+      <GridTile src="/images/edutech.png" alt="Edutech UI" id="edutech" />
       <GridTile
         src="/images/trustensure.png"
         alt="Trust Ensure UI"
-        id="targo"
+        id="trustensure"
       />
-      <GridTile src="/images/anonymou.png" alt="Anonymous UI" id="targo" />
-      <GridTile src="/images/crypto.png" alt="Crypto UI" id="targo" />
-      <GridTile src="/images/ieesct.png" alt="IEEE SCT UI" id="targo" />
-      <GridTile src="/images/edulog.png" alt="Edulog UI" id="targo" />
-      <GridTile src="/images/diary.png" alt="Diary UI" id="targo" />
+      <GridTile src="/images/anonymou.png" alt="Anonymous UI" id="anonymous" />
+      <GridTile src="/images/crypto.png" alt="Crypto UI" id="crypto" />
+      <GridTile src="/images/ieesct.png" alt="IEEE SCT UI" id="ieeesct" />
+      <GridTile src="/images/edulog.png" alt="Edulog UI" id="edulog" />
+      <GridTile src="/images/diary.png" alt="Diary UI" id="diary" />
     </div>
   );
 }
@@ -148,11 +150,42 @@ function ProjectsGridView() {
 function GridTile({src, alt, id} : {src: string, alt: string, id: string}) {
   return (
     <Link href={`/projects/${id}`}>
-      <div className="outer-projects-tile">
+      <div
+        id={`grid-tile-${id}`}
+        onMouseEnter={() => {
+          const element = document.getElementById(`view-projects-${id}`);
+          if (element) {
+            element.classList.remove("hidden");
+          }
+        }}
+        onMouseLeave={() => {
+          const element = document.getElementById(`view-projects-${id}`);
+          const imageElement = document.getElementById(`projects-image-${id}`);
+          if (element && imageElement) {
+            element.classList.add("hidden");
+            imageElement.classList.remove("tile-blur");
+          }
+        }}
+        className="outer-projects-tile"
+      >
         <div className="projects-grid-tile">
-          <div className="projects-image">
+          <div id={`projects-image-${id}`} className="projects-image">
             <Image src={src} alt={alt} fill />
           </div>
+        </div>
+        <div>
+          <button
+            id={`view-projects-${id}`}
+            className="white-button projects-view-button hidden"
+            onMouseEnter={() => {
+              const element = document.getElementById(`projects-image-${id}`);
+              if (element) {
+                element.classList.add("tile-blur");
+              }
+            }}
+          >
+            View Project ↗
+          </button>
         </div>
       </div>
     </Link>

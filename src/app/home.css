@@ -103,9 +103,48 @@
   transition: all 0.5s ease-in-out;
 }
 
+.projects-grid-tile {
+  position: absolute;
+}
+
 .projects-image:hover {
   transform: scale(0.8);
   filter: blur(10px);
+}
+
+.projects-view-button {
+  position: absolute;
+  width: 14vw;
+  height: auto;
+  left: 7vw;
+  top: calc(14vw - 13px);
+}
+
+.hidden {
+  display: none;
+}
+
+.tile-blur {
+  transform: scale(0.8);
+  filter: blur(10px);
+}
+
+.white-button {
+  background-color: white;
+  height: 46px;
+  color: #040404;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 8px 32px 8px 32px;
+  cursor: pointer;
+  border: none;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.white-button:hover {
+  background-color: white;
+  text-decoration: underline;
 }
 
 .scroll-up-button {
