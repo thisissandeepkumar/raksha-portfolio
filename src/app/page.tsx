@@ -2,8 +2,35 @@ import Image from "next/image";
 import "./home.css"
 import "./globals.css"
 import Link from "next/link";
+import axios from "axios";
+import type { GetServerSideProps, InferGetServerSidePropsType } from "next";
 
-export default function Home() {
+type Data = [
+  {
+    title: string,
+    pubDate: string,
+    link: string,
+    guid: string,
+    thumbnail: string,
+    description: string,
+    content: string,
+  }
+]
+
+async function getRSSData() {
+  const res = await fetch(
+    "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@rakshakaranth.s"
+  );
+  if(!res.ok) {
+    throw new Error("Something went wrong");
+  }
+  return res.json()
+}
+
+export default async function Home() {
+
+  const rssData = await getRSSData();
+
   return (
     <div>
       <WelcomeCard />
@@ -18,7 +45,7 @@ export default function Home() {
       <MySkills />
       <MyHobbiesSection />
       <MyAwards />
-      <MyBlogs />
+      <MyBlogs data={rssData.items} />
       <BuyMeACoffee />
     </div>
   );
@@ -414,12 +441,36 @@ function AwardsCard({
   );
 }
 
-function MyBlogs() {
+function MyBlogs({data}: {data: Data}) {
   return (
-    <div>
+    <div className="blogs-section">
       <h3 className="section-head">
         <ColouredText text="My" backgroundColor="#FCEBF2" /> Blogs
       </h3>
+      <hr className="section-head-underline" />
+      {data.map((blog) => (
+        <div className="blog-card-div">
+          <div className="blog-card">
+            <div className="blog-card-thumbnail">
+              <Image src={blog.thumbnail} alt="Thumbnail" fill />
+            </div>
+            <div className="blog-content-section">
+              <p className="blog-title">{blog.title.replace(/&amp;/g, "&")}</p>
+              <p className="blog-published">
+                {new Date(blog.pubDate).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </p>
+              <Link href={blog.guid} target="_blank">
+                <button className="dark-button">Read ↗</button>
+              </Link>
+            </div>
+          </div>
+          <hr className="section-head-underline" />
+        </div>
+      ))}
     </div>
   );
 }
