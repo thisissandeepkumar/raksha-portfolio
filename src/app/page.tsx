@@ -200,15 +200,74 @@ function MySkillsContentCard() {
           <MySkillsContentGridItem title="Usability Testing" level="Basic" />
         </div>
       </div>
+      <hr className="skills-divider" />
+      <div className="skills-section-box">
+        <div className="skills-title-container">
+          <MySkillsTitle title="Design Tools" color="#E5E2F6" />
+        </div>
+        <div className="skills-description-section">
+          <MySkillsContentGridItem title="Figma" level="Advanced" />
+          <MySkillsContentGridItem title="Figma" level="Basic" />
+          <MySkillsContentGridItem title="Balsamiq" level="Advanced" />
+          <MySkillsContentGridItem title="Sketch" level="Intermediate" />
+          <MySkillsContentGridItem
+            title="Adobe Photoshop"
+            level="Intermediate"
+          />
+          <MySkillsContentGridItem title="Corel Draw" level="Advanced" />
+          <MySkillsContentGridItem title="Adobe XD" level="Advanced" />
+          <MySkillsContentGridItem title="Adobe Illustrator" level="Advanced" />
+          <MySkillsContentGridItem title="InVision" level="Basic" />
+        </div>
+      </div>
+      <hr className="skills-divider" />
+      <div className="skills-section-box">
+        <div className="skills-title-container">
+          <MySkillsTitle title="Research & Testing" color="#FBE5D7" />
+        </div>
+        <div className="skills-description-section">
+          <MySkillsContentGridItem title="Checkealos" level="Basic" />
+          <MySkillsContentGridItem
+            title="Usertesting.com"
+            level="Intermediate"
+          />
+          <MySkillsContentGridItem title="Maze" level="Basic" />
+        </div>
+      </div>
+      <hr className="skills-divider" />
+      <div className="skills-section-box">
+        <div className="skills-title-container">
+          <MySkillsTitle title="Collaboration" color="#FCEBF2" />
+        </div>
+        <div className="skills-description-section">
+          <MySkillsContentGridItem title="Miro" level="Advanced" />
+          <MySkillsContentGridItem title="Google Suite" level="Advanced" />
+          <MySkillsContentGridItem
+            title="Microsoft Office 365"
+            level="Advanced"
+          />
+        </div>
+      </div>
+      <hr className="skills-divider" />
+      <div className="skills-section-box">
+        <div className="skills-title-container">
+          <MySkillsTitle title="Design Documentation" color="#D5F2FC" />
+        </div>
+        <div className="skills-description-section">
+          <MySkillsContentGridItem title="Jira" level="Intermediate" />
+          <MySkillsContentGridItem title="Trello" level="Advanced" />
+        </div>
+      </div>
     </div>
   );
 }
 
 function MySkillsTitle({title, color}: {title: string, color: string}) {
   return (
-    <span className="skills-title-underline">
+    <div style={{ position: "relative" }}>
       <h3 className="skills-title">{title}</h3>
-    </span>
+      <div className="skills-underline"></div>
+    </div>
   );
 }
 
