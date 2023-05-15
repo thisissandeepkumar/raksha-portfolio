@@ -154,11 +154,6 @@ function GridTile({src, alt, id} : {src: string, alt: string, id: string}) {
             <Image src={src} alt={alt} fill />
           </div>
         </div>
-        <div className="projects-image-overlay">
-          <div className="projects-image-overlay-center">
-            <button className="dark-button ob">View Projects</button>
-          </div>
-        </div>
       </div>
     </Link>
   );

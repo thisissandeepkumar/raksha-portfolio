@@ -96,12 +96,6 @@
   height: 28vw;
 }
 
-.projects-grid-tile {
-  position: absolute;
-  transition: all 0.5s ease-in-out;
-  z-index: 1;
-}
-
 .projects-image {
   position: relative;
   width: 28vw;
@@ -109,22 +103,9 @@
   transition: all 0.5s ease-in-out;
 }
 
-.projects-grid-tile:hover {
-  filter: blur(5px);
-  cursor: pointer;
-  z-index: -1;
-}
-
-.projects-image-overlay {
-  position: absolute;
-  width: 28vw;
-  height: 28vw;
-  z-index: 0;
-}
-
-.projects-image-overlay:hover {
-  cursor: pointer;
-  z-index: 2;
+.projects-image:hover {
+  transform: scale(0.8);
+  filter: blur(10px);
 }
 
 .scroll-up-button {
