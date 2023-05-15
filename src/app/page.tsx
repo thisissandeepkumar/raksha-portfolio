@@ -323,8 +323,7 @@ function MySkillsContentCard() {
 function MySkillsTitle({title, color}: {title: string, color: string}) {
   return (
     <div style={{ position: "relative" }}>
-      <h3 className="skills-title">{title}</h3>
-      <div className="skills-underline"></div>
+      <h3 className="skills-title" style={{ background: `linear-gradient(0deg, ${color} 50%, white 50%)` }}>{title}</h3>
     </div>
   );
 }
