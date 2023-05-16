@@ -395,15 +395,15 @@ function MyAwards() {
           description="Issued by ETHIndia Online Series · Feb 2023Issued by ETHIndia Online Series · Feb 2023"
         />
         <AwardsCard
+          imageSrc="/images/smartindia-hackathon-2022.png"
+          title="2nd Prize | Smart India Hackathon 2022"
+          description="Issued by AICTE · Aug 2022"
+        />
+        <AwardsCard
           imageSrc="/images/filecoin-1.png"
           secondaryImage="/images/filecoin-2.png"
           title="1st Prize for 'Polygon' | 3rd Prize for 'Filecoin' | ETHOdyssey"
           description="Issued by ETHIndia · Aug 2021"
-        />
-        <AwardsCard
-          imageSrc="/images/smartindia-hackathon-2022.png"
-          title="2nd Prize | Smart India Hackathon 2022"
-          description="Issued by AICTE · Aug 2022"
         />
         <AwardsCard
           imageSrc="/images/aadhaar-hackathon.png"

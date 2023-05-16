@@ -31,13 +31,21 @@
   width: 472px;
   height: 550px;
   position: relative;
-  transition: right 2s, top 2s, transform 2s;
+  transition: 0.8s;
+  /* animation: 0.4s; */
+  transform: scale(1.0);
+  /* Animate */
 }
 
 .card-image-content:hover {
   position: relative;
-  right: 80px;
-  top: 20px;
+  /* right: 80px;
+  top: 20px; */
+  /* transform: rotate3d(0, 1, 0, 180deg); */
+  /* transform: rotate(180deg); */
+  transform: translate(-50px, 30px);
+  /* Animate */
+  transition: 0.8s;
 }
 
 .numeric-container {
