@@ -167,6 +167,12 @@
   margin: 12px 0;
 }
 
+.visualDesignImage {
+  height: 490px;
+  width: 504px;
+  position: relative;
+}
+
 .visualDesignVideo {
   max-height: 624px;
   max-width: 771px;

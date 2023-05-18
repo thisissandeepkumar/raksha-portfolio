@@ -150,22 +150,35 @@ export default function ProjectPage({ params }: { params: { project: string } })
       <div className={`${styles.alignment}`}>
         <h3 className={styles.contentHeading}>Visual Design</h3>
         <div className={styles.visualContentContainer}>
-          <div>
-            <div className={styles.visualDesignImage1}>
-              <Image
-                src={`/images/${project.visualDesignsImages[0]}`}
-                alt={`/images/${project.visualDesignsImages[0]}`}
-                fill
-              />
+          {project.visualDesignsImages.length === 1 ? (
+            <div>
+              <div className={styles.visualDesignImage}>
+                <Image
+                  src={`/images/${project.visualDesignsImages[0]}`}
+                  alt={`/images/${project.visualDesignsImages[0]}`}
+                  fill
+                />
+              </div>
             </div>
-            <div className={styles.visualDesignImage1}>
-              <Image
-                src={`/images/${project.visualDesignsImages[1]}`}
-                alt={`/images/${project.visualDesignsImages[1]}`}
-                fill
-              />
+          ) : (
+            <div>
+              <div className={styles.visualDesignImage1}>
+                <Image
+                  src={`/images/${project.visualDesignsImages[0]}`}
+                  alt={`/images/${project.visualDesignsImages[0]}`}
+                  fill
+                />
+              </div>
+              <div className={styles.visualDesignImage1}>
+                <Image
+                  src={`/images/${project.visualDesignsImages[1]}`}
+                  alt={`/images/${project.visualDesignsImages[1]}`}
+                  fill
+                />
+              </div>
             </div>
-          </div>
+          )}
+
           <div>
             <video
               className={styles.visualDesignVideo}
