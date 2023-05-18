@@ -203,7 +203,9 @@ export default function ProjectPage({ params }: { params: { project: string } })
         <p className={`${styles.textContent}`}>{project.toolsUsed}</p>
       </div>
       {project.mobileUserInterfaces.length > 0 ? (
-        <div className={`${styles.mobileInterface}`}>
+        <div
+          className={`${styles.mobileInterface}`}
+        >
           <div className={`${styles.alignment}`}>
             <h3 className={styles.contentHeading}>Mobile User Interfaces</h3>
             <div className={styles.interfaceContainer}>

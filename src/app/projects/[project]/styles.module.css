@@ -117,6 +117,10 @@
   line-height: 38.4px;
 }
 
+.interfaceOuterBox {
+  margin-right: 0;
+}
+
 .mobileInterface {
   background-color: #F8F8F8;
   height: 566px;
@@ -178,4 +182,42 @@
   max-height: 624px;
   max-width: 771px;
   margin: 0 0 0 24px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1080px) {
+
+  .alignment {
+    margin: 16px 55px;
+  }
+  
+  .responsiveRow {
+    flex-direction: column;
+  }
+
+  .projectOverviewBox {
+    margin: 0 0 16px 0;
+  }
+
+  .sectionDivisionLine {
+    margin: 32px 55px;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+
+  .alignment {
+    margin: 16px 25px;
+  }
+  
+  .responsiveRow {
+    flex-direction: column;
+  }
+
+  .projectOverviewBox {
+    margin: 0 0 16px 0;
+  }
+
+  .sectionDivisionLine {
+    margin: 32px 25px;
+  }
 }
