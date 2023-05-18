@@ -42,8 +42,23 @@ const projectData = [
       "Test and refine the design based on user feedback   and evolving business needs.",
     ],
     toolsUsed: "Figma, Adobe Illustrator, Balsamiq, Miro, Maze",
-    mobileUserInterfaces: [],
-    webUserInterfaces: [],
+    mobileUserInterfaces: [
+      "1-mobile-targo.png",
+      "2-mobile-targo.png",
+      "3-mobile-targo.png",
+      "4-mobile-targo.png",
+      "5-mobile-targo.png",
+      "6-mobile-targo.png",
+      "7-mobile-targo.png",
+      "8-mobile-targo.png",
+      "9-mobile-targo.png",
+    ],
+    webUserInterfaces: [
+      "1-web-targo.png",
+      "2-web-targo.png",
+      "3-web-targo.png",
+      "4-web-targo.png",
+    ],
     results:
       "The client was extremely pleased with the final result, which incorporated their unique part-loading system and advanced logistics algorithms into an intuitive and easy-to-use interface. The real-time tracking and monitoring features for both customers and delivery drivers, as well as the admin dashboard for truck monitoring and management, were particularly impressive.",
   },
@@ -146,16 +161,38 @@ export default function ProjectPage({ params }: { params: { project: string } })
         <h3 className={styles.contentHeading}>Tools Used:</h3>
         <p className={`${styles.textContent}`}>{project.toolsUsed}</p>
       </div>
-      <div className={`${styles.mobileInterface}`}>
-        <div className={`${styles.alignment}`}>
-          <h3 className={styles.contentHeading}>Mobile User Interfaces</h3>
+      {project.mobileUserInterfaces.length > 0 ? (
+        <div className={`${styles.mobileInterface}`}>
+          <div className={`${styles.alignment}`}>
+            <h3 className={styles.contentHeading}>Mobile User Interfaces</h3>
+            <div className={styles.interfaceContainer}>
+              {project.mobileUserInterfaces.map((image: string) => (
+                <div className={styles.interfaceImageContainer}>
+                  <Image src={`/images/${image}`} alt={image} fill />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
-      <div className={`${styles.mobileInterface}`}>
-        <div className={`${styles.alignment}`}>
-          <h3 className={styles.contentHeading}>Web User Interfaces</h3>
+      ) : (
+        <div></div>
+      )}
+      {project.webUserInterfaces.length > 0 ? (
+        <div className={`${styles.mobileInterface}`}>
+          <div className={`${styles.alignment}`}>
+            <h3 className={styles.contentHeading}>Web User Interfaces</h3>
+            <div className={styles.interfaceContainer}>
+              {project.webUserInterfaces.map((image: string) => (
+                <div className={styles.webInterfaceImageContainer}>
+                  <Image src={`/images/${image}`} alt={image} fill />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
+      ) : (
+        <div></div>
+      )}
       <div className={`${styles.alignment}`}>
         <h3 className={styles.contentHeading}>Results:</h3>
         <p className={styles.textContent}>{project.results}</p>

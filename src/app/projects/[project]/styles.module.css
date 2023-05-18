@@ -122,5 +122,28 @@
   height: 566px;
   margin: 0;
   width: 100vw;
-  padding: 42px 106px;
+  padding: 42px 0px;
+  /* max-width: 100vw; */
+}
+
+.interfaceContainer {
+  overflow: scroll;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.interfaceImageContainer {
+  position: relative;
+  min-width: 209px;
+  min-height: 430px;
+  margin: 0 15px;
+}
+
+.webInterfaceImageContainer {
+  position: relative;
+  min-width: 616px;
+  min-height: 430px;
+  margin: 0 15px;
 }
