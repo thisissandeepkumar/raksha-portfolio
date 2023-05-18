@@ -27,6 +27,55 @@
   font-weight: 400;
 }
 
+.audio-section {
+  min-width: 85px;
+  min-height: 85px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  margin: 0;
+}
+
+.play-border {
+  width: 25px;
+  height: 25px;
+  background-origin: padding-box;
+  border: 1px solid #040404;
+  border-radius: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 15px 0 15px;
+}
+
+.play-border:hover {
+  background-color: #040404;
+  border: 1px solid #040404;
+  border-radius: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.play-icon {
+  width: 15px;
+  height: 15px;
+  position: relative;
+}
+
+.audio-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29.05px;
+  margin: 0;
+}
+
 .card-image-content {
   width: 472px;
   height: 550px;
