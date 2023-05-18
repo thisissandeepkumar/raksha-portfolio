@@ -628,6 +628,42 @@
     font-size: 12px;
     padding: 8px 16px;
   }
+
+  .skills-divider {
+    margin: 0px 0px;
+  }
+
+  .skills-title-container {
+    width: 80%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .skills-title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38.73px;
+  }
+
+  .skills-section {
+    margin: 0 24px;
+  }
+
+  .skills-description-section {
+    margin-top: 32px;
+  }
+
+  .skills-description-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 27.6px;
+  }
+
+  .skills-description-level {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18.4px;
+  }
 }
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
@@ -654,8 +690,8 @@
   }
 
   .card-image-content {
-    max-width: 330px;
-    height: 420px;
+    max-width: 390px;
+    height: 445px;
   }
 
   .numeric-container {
@@ -833,5 +869,29 @@
 
   .hobby-title {
     margin-top: 5px;
+  }
+
+  .skills-divider {
+    margin: 0px 0px;
+  }
+
+  .skills-title-container {
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .skills-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.05px;
+  }
+
+  .skills-section {
+    margin: 0 24px;
+  }
+
+  .skills-description-section {
+    margin-top: 32px;
   }
 }
