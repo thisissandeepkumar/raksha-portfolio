@@ -798,4 +798,10 @@
   .blog-published {
     font-size: 16px;
   }
+
+  .section-head {
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 36.1px;
+  }
 }
