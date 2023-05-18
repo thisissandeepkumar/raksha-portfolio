@@ -623,6 +623,11 @@
     margin-right: 0;
     margin-bottom: 20px;
   }
+
+  .white-button {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
 }
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
