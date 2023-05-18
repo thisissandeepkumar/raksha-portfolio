@@ -28,7 +28,8 @@ const projectData = [
       "Portray end-to-end supply-chain visibility to customers: Provide customers with a clear, end-to-end view of the supply chain, giving them insight into the entire process from start to finish.",
       "Ensure the driver app is simple to use with minimal distractions: The driver app should be designed with simplicity in mind, avoiding unnecessary distractions and focusing on the core functionality.",
     ],
-    visualDesigns: ["targo-1.png", "targo-2.png", "targo-3.png"],
+    visualDesignsImages: ["targo-vd-1.png", "targo-vd-2.png"],
+    visualDesignVideo: "targo-vd-video.mov",
     designApproach: [
       "Research and define user personas for both customers and delivery drivers.",
       "Create a user flow that outlines the steps involved in using the TARGO platform, from signing up to tracking shipments.",
@@ -148,6 +149,33 @@ export default function ProjectPage({ params }: { params: { project: string } })
       </div>
       <div className={`${styles.alignment}`}>
         <h3 className={styles.contentHeading}>Visual Design</h3>
+        <div className={styles.visualContentContainer}>
+          <div>
+            <div className={styles.visualDesignImage1}>
+              <Image
+                src={`/images/${project.visualDesignsImages[0]}`}
+                alt={`/images/${project.visualDesignsImages[0]}`}
+                fill
+              />
+            </div>
+            <div className={styles.visualDesignImage1}>
+              <Image
+                src={`/images/${project.visualDesignsImages[1]}`}
+                alt={`/images/${project.visualDesignsImages[1]}`}
+                fill
+              />
+            </div>
+          </div>
+          <div>
+            <video
+              className={styles.visualDesignVideo}
+              src={`/videos/${project.visualDesignVideo}`}
+              autoPlay
+              loop
+              typeof="video/mov"
+            ></video>
+          </div>
+        </div>
       </div>
       <div className={`${styles.alignment}`}>
         <h3 className={styles.contentHeading}>Design Approach</h3>
@@ -167,7 +195,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
             <h3 className={styles.contentHeading}>Mobile User Interfaces</h3>
             <div className={styles.interfaceContainer}>
               {project.mobileUserInterfaces.map((image: string) => (
-                <div className={styles.interfaceImageContainer}>
+                <div key={image} className={styles.interfaceImageContainer}>
                   <Image src={`/images/${image}`} alt={image} fill />
                 </div>
               ))}
@@ -183,7 +211,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
             <h3 className={styles.contentHeading}>Web User Interfaces</h3>
             <div className={styles.interfaceContainer}>
               {project.webUserInterfaces.map((image: string) => (
-                <div className={styles.webInterfaceImageContainer}>
+                <div key={image} className={styles.webInterfaceImageContainer}>
                   <Image src={`/images/${image}`} alt={image} fill />
                 </div>
               ))}
