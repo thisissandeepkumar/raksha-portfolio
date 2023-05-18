@@ -40,6 +40,7 @@ export default async function Home() {
     <div>
       <WelcomeCard />
       <NumericalValuesCard />
+      <div className="separation-container" />
       <MyProjects />
       <ProjectsGridView />
       <Link href="#">
@@ -519,10 +520,7 @@ function BuyMeACoffee() {
           </p>
         </div>
         <div>
-          <Link
-            href="https://www.w3schools.com/css/css_margin.asp"
-            target="_blank"
-          >
+          <Link href="https://www.buymeacoffee.com/rakshas" target="_blank">
             <button className="dark-button">BUY ME A COFFEE ↗</button>
           </Link>
         </div>
@@ -576,10 +574,10 @@ function MyDesignProcess() {
 function MyDesignProcessCard({image, description} : {image: string, description: string}) {
   return (
     <div className="design-process-card">
-      <div className="design-process-image">
-        <Image src={image} alt="Notebook" fill />
-      </div>
-      <p className="design-process-description">{description}</p>
+        <div className="design-process-image">
+          <Image src={image} alt="Notebook" fill />
+        </div>
+        <p className="design-process-description">{description}</p>
     </div>
   );
 }

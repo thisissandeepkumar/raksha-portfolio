@@ -57,7 +57,13 @@
   align-items: center;
   color: #FFFFFF;
   line-height: 67px;
-  margin: 0;
+  margin: 0px 0px 32px 0px;
+  position: absolute;
+  width: 100vw;
+}
+
+.separation-container {
+  min-height: 24vh;
 }
 
 .numeric-tile {
@@ -512,6 +518,11 @@
   margin: 0 0 24px 0;
 }
 
+.arrow {
+  position: absolute;
+}
+
+
 @media screen and (min-width: 768px) and (max-width: 1080px) {
 
   .card-content {
@@ -645,6 +656,10 @@
   .numeric-container {
     flex-direction: column;
     height: 520px;
+  }
+
+  .separation-container {
+    min-height: 520px;
   }
 
   .projects-grid {
