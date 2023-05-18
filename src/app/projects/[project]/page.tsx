@@ -95,8 +95,43 @@ const projectData = [
     results:
       "Our landing pages for donors and NGOs were designed with both aesthetics and usability in mind, while your research and visual components set the foundation for an optimal user journey and flow. We presented the UI prototype to the judges who were extremely pleased with the design of the platform.",
   },
+  {
+    id: "trustinsure",
+    mainTitle: "TrustInsure - Lead Tracking System for Insurance Company",
+    labels: ["Sales & leads", "Light Theme", "Dark Theme", "UI Design"],
+    description:
+      "Trust insure is an insurance company that wants a web application for their sales & marketing team to track all customer leads on one platform. This includes all channels like social media, email marketing and creating new insurance policies as an admin. This is a hobby project that I worked on to improve my skills on designing for light and dark themes",
+    duration: "48 hours",
+    screens: "8",
+    role: "UI Designer",
+    projectImage: "/images/tng-1.png",
+    projectScope: [
+      "Dashboard: The dashboard displays leads generated on various social media platforms, providing detailed statistics on age, gender, and demographics.",
+      "Customer Leads: This screen presents a list of leads in a tabular format, allowing the user to quickly view the user's location, type of insurance they are interested in, and the source of the lead.",
+      "Notifications: The notification tab is a crucial section of the user's screen, accessible by clicking the notification button. This screen displays important notifications such as follow-up reminders, customer lead conversions, and messages.",
+      "Insurance Plans: Admins can access this page to create new insurance plans for existing policies, aimed at attracting more customers. This screen also serves as a centralized information hub for plans and specific terms to keep in mind when pitching them to new leads."
+  ],
+    projectGoals: [
+      "The Design must be Minimal",
+      "Content must be Informative to marketing teams",
+      "The UI must be convenient to add, manage and delete leads.",
+      "The UI must have light and dark themes for better accessibility.",
+    ],
+    visualDesigns: ["tng-2.png", "tng-3.png"],
+    designApproach: [
+      "Analyze Problem: Before beginning the design process, note the requirements in the dashboard which needs to display leads generated on various social media platforms and detailed statistics on age, gender, and demographics.",
+      "Ideate: Sketching out different ideas to determine what will work best for lead tracking.",
+      "Gather Inspiration: Seek inspiration from similar designs and dashboards that have successfully displayed this information.",
+      "Wireframing: Prepare sketch of the dashboard and place different components, such as leads, notifications, and insurance plans in their appropriate locations.",
+      "UI Design:  The design should be user-centric, keeping the user's needs and goals in mind throughout the design process. Use WCG2.0 guidelines and color contrast to make light and dark theme transitions.",
+    ],
+    toolsUsed: "Figma, Adobe Illustrator",
+    mobileUserInterfaces: [],
+    webUserInterfaces: [],
+    results:
+      "The resulting screens were simple to use, informative and concise with content. This was the intention and I seem to have achieved it. Since this is a practice project, this design remains in the prototype phase only. Additionally, one of my main goals was to learn designing for light and dark themes. This helped me understand how to utilise color contrast ratio guidelines like 4:5:1 or using WCG2.0 guidelines to make light and dark theme transitions."
 ];
-
+},
 
 export default function ProjectPage({ params }: { params: { project: string } }) {
 
