@@ -804,4 +804,34 @@
     font-weight: 400;
     line-height: 36.1px;
   }
+
+  .projects-image {
+    width: 80vw;
+    height: 80vw;
+  }
+
+  .outer-projects-tile {
+    width: 80vw;
+    height: 80vw;
+  }
+
+  .projects-view-button {
+    position: absolute;
+    width: 65vw;
+    height: auto;
+    left: 7vw;
+    top: calc(40vw - 13px);
+  }
+
+  .separation-container-scroll {
+    min-height: 66px;
+  }
+
+  .hobbies-card {
+    margin-bottom: 10px;
+  }
+
+  .hobby-title {
+    margin-top: 5px;
+  }
 }

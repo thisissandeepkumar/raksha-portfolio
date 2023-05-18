@@ -46,6 +46,7 @@ export default async function Home() {
       <Link href="#">
         <button className="dark-button scroll-up-button">SCROLL UP ↗</button>
       </Link>
+      <div className="separation-container-scroll" />
       <AboutMe />
       <MyDesignProcess />
       <MySkills />
