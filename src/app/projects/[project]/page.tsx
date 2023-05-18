@@ -129,9 +129,140 @@ const projectData = [
     mobileUserInterfaces: [],
     webUserInterfaces: [],
     results:
-      "The resulting screens were simple to use, informative and concise with content. This was the intention and I seem to have achieved it. Since this is a practice project, this design remains in the prototype phase only. Additionally, one of my main goals was to learn designing for light and dark themes. This helped me understand how to utilise color contrast ratio guidelines like 4:5:1 or using WCG2.0 guidelines to make light and dark theme transitions."
-];
-},
+      "The resulting screens were simple to use, informative and concise with content. This was the intention and I seem to have achieved it. Since this is a practice project, this design remains in the prototype phase only. Additionally, one of my main goals was to learn designing for light and dark themes. This helped me understand how to utilise color contrast ratio guidelines like 4:5:1 or using WCG2.0 guidelines to make light and dark theme transitions.",
+  }
+  {
+    id: "SeaCutt",
+    mainTitle: "SeaCUTT - Retail Sea-food Ordering & Delivery App",
+    labels: ["Mobile App","UI Design","Delivery App"],
+    description:
+      "SeaCutt is a retail seafood ordering and delivery app that allows retailers to order fresh sea items directly from fishermen and have them delivered to their selling outlets. The app features an intuitive and pleasing user interface that simplifies the ordering process for users. The app is scheduled to launch in June 2023.",
+    duration: "24 hours",
+    screens: "5",
+    role: "UI Designer",
+    projectImage: "/images/seacutt-cover.png",
+    projectScope: "This app is designed for retailers to buy sea-fish from fishermen directly."
+    projectGoals: [
+      "Design a visually appealing, user-friendly UI design that simplifies the ordering process for retailers.",
+      "Create a clean, uncluttered UI layout with consistent typography and color scheme.",
+      "Ensure app responsiveness and adaptability across multiple devices.",
+      "Use high-quality product images to showcase the freshness and quality of seafood products.",
+      "Design an efficient and seamless checkout process to reduce cart abandonment rates.",
+    ],
+    visualDesigns: ["/images/seacutt-vdi.png"],
+    designApproach: [
+      "Clear labeling: Use clear labeling for all app elements and actions to make it easy for users to navigate and understand the app's features.",
+      "Minimalistic layout: Create a clean and minimalistic UI layout to highlight the seafood products and simplify the ordering process.",
+      "Consistent color scheme: Use a consistent color scheme that reflects the brand and seafood theme of the app.",
+      "High-quality product images: Use high-quality product images to showcase the freshness and quality of the seafood products to attract and retain customers.",
+      "Intuitive ordering process: Design an intuitive ordering process with clear steps that guide users through selecting and ordering the seafood products.",
+      "Seamless checkout process: Create a simple and seamless checkout process to enable users to complete their orders quickly and efficiently.",
+      "Adaptive design: Ensure that the app UI design is adaptive to different screen sizes and resolutions to optimize the app for a range of devices.",
+    ],
+    toolsUsed: "Figma",
+    mobileUserInterfaces: [
+      "/images/1-scmi.png",
+      "/images/2-scmi.png",
+      "/images/3-scmi.png",
+      "/images/4-scmi.png",
+      "/images/5-scmi.png",
+    ],
+    webUserInterfaces: [],
+    results:
+      "The design was a huge success as it is consistent, easy to book the sea-fish and accessible in terms of CTAs and font visibility",
+  },
+  {
+    id: "anonynmous",
+    mainTitle: "Anonymous Tip-Off System",
+    labels: ["Crime Investigation Systems","Mobile App","UI Design","UX Design","Smart Systems"],
+    description:
+      "The Anonymous tip-off system allows witnesses to submit crime tips anonymously through blockchain technology. The goals include ensuring the anonymity of informants, increasing citizen responses, incentivising valid tips, providing better insights to law enforcement, establishing a platform for crime reports, and reducing paperwork. This design was done as part my Final Year Engineering Project.",
+    duration: "24 weeks",
+    screens: "35",
+    role: "UI & UX Designer",
+    projectImage: "/images/ato-cover-Image.png",
+    projectScope: "The scope of the project is to design and develop a user-friendly and secure anonymous tip off app that encourages users to report crimes they may have witnessed without fear of retribution.",
+    projectGoals: [
+      "Develop an intuitive UI for the anonymous tip off app to increase ease of use for users",
+      "Implement UX design strategies to ensure users feel safe and secure when submitting tips",
+      "Create a seamless onboarding process to increase user adoption and participation",
+      "Design a visually appealing interface to engage users and encourage regular usage",
+    ],
+    visualDesigns: ["/images/ato-vdi.png"],
+    designApproach: [
+      "Simplify the onboarding process with easy-to-follow steps to minimize user drop-offs",
+      "Implement a clean and modern design to increase visual appeal and user engagement",
+      "Utilize intuitive iconography and typography to ensure ease of use and understanding for all users",
+      "Incorporate security features such as two-factor authentication and end-to-end encryption to promote user safety and trust",
+      "Create a seamless user experience with minimal friction to encourage regular usage of the app",
+    ],
+    toolsUsed: "Figma",
+    mobileUserInterfaces: [
+      "/images/1-ato.png",
+      "/images/2-ato.png",
+      "/images/3-ato.png",
+      "/images/4-ato.png",
+      "/images/5-ato.png",
+      "/images/6-ato.png",
+      "/images/7-ato.png",
+      "/images/8-ato.png",
+      "/images/9-ato.png",
+    ],
+    webUserInterfaces: [],
+    results:
+      "The anonymous tip off app achieved its goal of creating a user-friendly and secure platform for users to submit tips about crimes they may have witnessed. The app's intuitive UI and UX design approach led to increased adoption and participation from users, resulting in more tips being submitted to law enforcement agencies. Additionally, the app's secure features and visual appeal contributed to a sense of trust and safety among users, encouraging them to use the app frequently.",
+  },
+  {
+    id: "shell",
+    mainTitle: "Shell x Avigna - Fuel Booking & Delivery App",
+    labels: ["Fuel Delivery App","Booking & Delivery System","Mobile & Web Interface","Role Based Access"],
+    description:
+      "Avigna App, a partner of Shell, is a cutting-edge mobile application that enables Shell customers to seamlessly book fuel deliveries to their desired location. The application allows customers to specify their delivery location, the purpose of the fuel, the desired fuel quantity, and their unique customer identification number (UID).",
+    duration: "3 weeks",
+    screens: "37",
+    role: "UI Designer",
+    projectImage: "/images/shell-cover-Image.png",
+    projectScope: "The app is specifically designed for Shell customers, drivers, and administrators, and utilizes advanced algorithms to optimize fuel delivery routes and schedules.",
+    projectGoals: [
+      "Create an intuitive and user-friendly interface that is easy to navigate and understand for all users.",
+      "Design an efficient and seamless booking process for fuel deliveries, allowing customers to easily specify their delivery location, fuel quantity, and purpose of fuel.",
+      "Implement a responsive design that is optimized for both iOS and Android platforms.",
+      "Design for real-time tracking feature of the app.",
+      "Utilize Shell's branding and visual identity to create a cohesive design that aligns with the company's values and mission.",
+      "Provide advanced analytics and reporting features for administrators, allowing them to track fuel deliveries, monitor performance, and optimize the overall fuel delivery process.",
+    ],
+    visualDesigns: ["/images/shell-vdi.png"],
+    designApproach: [
+      "Understand the problem statement.",
+      "Gather Inspiration and prepare mood-boards for the design concept.",
+      "Align colors and icons to Shell brand identity.",
+      "Design an intuitive and simple user-interface.",
+      "Prototype and test with real users.",
+      "Gather pain points and refine the design.",
+    ],
+    toolsUsed: "Figma, Adobe Illustrator, Balsamiq",
+    mobileUserInterfaces: [
+      "/images/1-smi.png",
+      "/images/2-smi.png",
+      "/images/3-smi.png",
+      "/images/4-smi.png",
+      "/images/5-smi.png",
+      "/images/6-smi.png",
+      "/images/7-smi.png",
+      "/images/8-smi.png",
+      "/images/9-smi.png",
+      "/images/10-smi.png",
+    ],
+    webUserInterfaces: [
+      "/images/1-swi.png",
+      "/images/2-swi.png",
+      "/images/3-swi.png",
+      "/images/4-swi.png",
+      "/images/5-swi.png",
+    ],
+    results:
+      "The clients were impressed with the intuitive user interface and user-friendly design of the mobile app, which made it easy for customers, drivers, and administrators to use the app efficiently. The advanced analytics and reporting features of the app were particularly impressive to the client, as they provided valuable insights into the fuel delivery process and helped optimize performance.",
+  },
 
 export default function ProjectPage({ params }: { params: { project: string } }) {
 
