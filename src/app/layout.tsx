@@ -46,64 +46,68 @@ export default function RootLayout({
       </Head>
 
       <body>
-        <nav className="main-nav">
-          <Image
-            className="menu-icon"
-            src="/icons/menu_icon.svg"
-            alt="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTsptVQSRVRivZeLcgXA7rv3z0na_vtcJ-xapXoH-bhVNM78ghI"
-            width={30}
-            height={30}
-            onClick={() => {
-              console.log("clicked");
-              const navBarElement =
-                document.getElementById("responsive-nav-bar");
-              if (navBarElement) {
-                navBarElement.classList.toggle("hidden");
-              }
-            }}
-          />
-          <ul className="nav-ul">
-            <li>
-              <Link className="nav-li" href="#my-projects">
-                MY PROJECTS
-              </Link>
-            </li>
-            <li>
-              <Link className="nav-li" href="#about-me">
-                ABOUT ME
-              </Link>
-            </li>
-            <li>
-              <Link className="nav-li" href="#">
-                MY BLOGS
-              </Link>
-            </li>
-            <li>
-              <Link className="nav-li" href="#">
-                CONTACT ME
-              </Link>
-            </li>
-            <li>
-              <Link className="nav-li" href="#">
-                SUPPORT
-              </Link>
-            </li>
-          </ul>
-          <Link
-            href="https://drive.google.com/file/d/1mp_nRpDA44XLWsJkfrlpWJ1eqOSR7xtc/view?usp=sharing"
-            target="_blank"
-          >
-            <button className="dark-button">RESUME ↗</button>
-          </Link>
+        <nav>
+          <div className="main-nav">
+            <Image
+              className="menu-icon"
+              src="/icons/menu_icon.svg"
+              alt="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTsptVQSRVRivZeLcgXA7rv3z0na_vtcJ-xapXoH-bhVNM78ghI"
+              width={30}
+              height={30}
+              onClick={() => {
+                console.log("clicked");
+                const navBarElement = document.getElementById(
+                  "responsive-nav-bar-898"
+                );
+                if (navBarElement) {
+                  navBarElement.classList.toggle("hidden");
+                }
+              }}
+            />
+            <ul className="nav-ul">
+              <li>
+                <Link className="nav-li" href="#my-projects">
+                  MY PROJECTS
+                </Link>
+              </li>
+              <li>
+                <Link className="nav-li" href="#about-me">
+                  ABOUT ME
+                </Link>
+              </li>
+              <li>
+                <Link className="nav-li" href="#">
+                  MY BLOGS
+                </Link>
+              </li>
+              <li>
+                <Link className="nav-li" href="#">
+                  CONTACT ME
+                </Link>
+              </li>
+              <li>
+                <Link className="nav-li" href="#">
+                  SUPPORT
+                </Link>
+              </li>
+            </ul>
+            <Link
+              href="https://drive.google.com/file/d/1mp_nRpDA44XLWsJkfrlpWJ1eqOSR7xtc/view?usp=sharing"
+              target="_blank"
+            >
+              <button className="dark-button">RESUME ↗</button>
+            </Link>
+          </div>
+          <div id="responsive-nav-bar-898" className="responsive-nav">
+            <ul>
+              <li>MY PROJECTS</li>
+              <li>MY PROJECTS</li>
+              <li>MY PROJECTS</li>
+              <li>MY PROJECTS</li>
+            </ul>
+          </div>
         </nav>
-        <div id="responsive-nav-bar" className="responsive-nav">
-          <ul>
-            <li>MY PROJECTS</li>
-            <li>MY PROJECTS</li>
-            <li>MY PROJECTS</li>
-            <li>MY PROJECTS</li>
-          </ul>
-        </div>
+
         {children}
         <footer className="main-footer">
           <div className="footer-routes">
