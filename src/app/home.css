@@ -39,8 +39,8 @@
 }
 
 .play-border {
-  width: 25px;
-  height: 25px;
+  width: 55px;
+  height: 55px;
   background-origin: padding-box;
   border: 1px solid #040404;
   border-radius: 100px;
@@ -48,7 +48,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 0 15px 0 15px;
+  margin: 0 15px 0 0px;
 }
 
 .play-border:hover {
@@ -63,8 +63,8 @@
 }
 
 .play-icon {
-  width: 15px;
-  height: 15px;
+  width: 25px;
+  height: 25px;
   position: relative;
 }
 
