@@ -4,6 +4,7 @@ import Image from "next/image";
 import "./home.css"
 import "./globals.css"
 import Link from "next/link";
+import { useState } from "react";
 
 type Data = [
   {
@@ -40,11 +41,13 @@ export default async function Home() {
     <div>
       <WelcomeCard />
       <NumericalValuesCard />
+      <div className="separation-container" />
       <MyProjects />
       <ProjectsGridView />
       <Link href="#">
         <button className="dark-button scroll-up-button">SCROLL UP ↗</button>
       </Link>
+      <div className="separation-container-scroll" />
       <AboutMe />
       <MyDesignProcess />
       <MySkills />
@@ -57,20 +60,49 @@ export default async function Home() {
 }
 
 function WelcomeCard() {
+
+  const [isAudioPlaying, setIsAudioPlaying] = useState(false);
+
   return (
     <div className="card-content">
       <div className="welcome-card-text-content">
         <p className="welcome-1">Hey, I'm Raksha 👋</p>
-        <p className={`welcome-2`}>
-          Welcome to My UI & UX Design Portfolio
-        </p>
+        <p className={`welcome-2`}>Welcome to My UI & UX Design Portfolio</p>
+        <div className="audio-section">
+          <div
+            className="play-border"
+            onMouseEnter={() => {}}
+            onClick={() => {
+              let audio = document.getElementById(
+                "audio-id"
+              ) as HTMLAudioElement;
+              if (isAudioPlaying) {
+                audio.pause();
+                setIsAudioPlaying(false);
+              } else {
+                audio.play();
+                setIsAudioPlaying(true);
+              }
+            }}
+          >
+            <div className="play-icon">
+              <Image
+                src={
+                  isAudioPlaying
+                    ? "/icons/pause-icon.svg"
+                    : "/icons/play-icon.svg"
+                }
+                alt="play-icon"
+                fill
+              />
+            </div>
+          </div>
+          <audio id="audio-id" src="/audio/raksha-audio.mp3" />
+          <p className="audio-text">{isAudioPlaying ? "Pause" : "Listen"}</p>
+        </div>
       </div>
       <div className="card-image-content">
-        <Image
-          src="/images/raksha.png"
-          alt="Image of Raksha"
-          fill
-        />
+        <Image src="/images/raksha.png" alt="Image of Raksha" fill />
       </div>
     </div>
   );
@@ -519,10 +551,7 @@ function BuyMeACoffee() {
           </p>
         </div>
         <div>
-          <Link
-            href="https://www.w3schools.com/css/css_margin.asp"
-            target="_blank"
-          >
+          <Link href="https://www.buymeacoffee.com/rakshas" target="_blank">
             <button className="dark-button">BUY ME A COFFEE ↗</button>
           </Link>
         </div>
@@ -576,10 +605,10 @@ function MyDesignProcess() {
 function MyDesignProcessCard({image, description} : {image: string, description: string}) {
   return (
     <div className="design-process-card">
-      <div className="design-process-image">
-        <Image src={image} alt="Notebook" fill />
-      </div>
-      <p className="design-process-description">{description}</p>
+        <div className="design-process-image">
+          <Image src={image} alt="Notebook" fill />
+        </div>
+        <p className="design-process-description">{description}</p>
     </div>
   );
 }
