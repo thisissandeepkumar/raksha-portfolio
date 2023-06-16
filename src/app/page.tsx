@@ -87,6 +87,7 @@ function WelcomeCard() {
           >
             <div className="play-icon">
               <Image
+              className="icon-image"
                 src={
                   isAudioPlaying
                     ? "/icons/pause-icon.svg"
@@ -504,14 +505,16 @@ function AwardsCard({
 }
 
 function MyBlogs({data}: {data: Data}) {
+  let i = 0
   return (
     <div className="blogs-section">
       <h3 className="section-head">
         <ColouredText text="My" backgroundColor="#FCEBF2" /> Blogs
       </h3>
       <hr className="section-head-underline" />
-      {data.map((blog) => (
-        <div className="blog-card-div">
+      {data.map((blog) => {
+        return (
+        <div key={i.toString()} className="blog-card-div">
           <div className="blog-card">
             <div className="blog-card-thumbnail">
               <Image src={blog.thumbnail} alt="Thumbnail" fill />
@@ -532,7 +535,8 @@ function MyBlogs({data}: {data: Data}) {
           </div>
           <hr className="section-head-underline" />
         </div>
-      ))}
+      )
+      })}
     </div>
   );
 }
@@ -564,11 +568,11 @@ function MyDesignProcess() {
   return (
     <div className="design-process-container">
       <h3 className="section-head buy-coffee-heading">My Design Process</h3>
-      <div className="design-process-inner-grid">
-        <MyDesignProcessCard
-          image="/icons/notebook.svg"
-          description="Understand the Requirement"
-        />
+      <div className="design-process-inner-grid">        
+          <MyDesignProcessCard
+            image="/icons/notebook.svg"
+            description="Understand the Requirement"
+          />
         <MyDesignProcessCard
           image="/icons/lens.svg"
           description="Do User & Market Research"
@@ -604,11 +608,11 @@ function MyDesignProcess() {
 
 function MyDesignProcessCard({image, description} : {image: string, description: string}) {
   return (
-    <div className="design-process-card">
+      <div className="design-process-card">
         <div className="design-process-image">
           <Image src={image} alt="Notebook" fill />
         </div>
         <p className="design-process-description">{description}</p>
-    </div>
+      </div>
   );
 }
