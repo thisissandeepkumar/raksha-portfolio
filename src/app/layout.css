@@ -106,8 +106,15 @@
     margin: 0 20px 0 20px;
   }
 
-  .nav-ul {
+  .hidden {
     display: none;
+  }
+
+  .nav-ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
   }
 
   .nav-li {
@@ -165,6 +172,16 @@
     width: 25px;
     height: 25px;
   }
+
+  .responsive-nav {
+    min-height: 88vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: red;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -205,6 +222,10 @@
     height: 35px;
     margin: 18px;
   }
+
+  .responsive-nav {
+    display: none;
+  }
 }
 
 .nav-ul {
@@ -229,4 +250,8 @@
 .nav-li:hover {
   text-decoration: underline;
   font-weight: 500;
+}
+
+.responsive-nav {
+  display: none;
 }

@@ -1,13 +1,14 @@
+"use client"
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import "./globals.css"
 import "./layout.css"
 
-export const metadata = {
-  title: 'Raksha S',
-  description: 'Your next UI/UX Designer!',
-}
+// export const metadata = {
+//   title: 'Raksha S',
+//   description: 'Your next UI/UX Designer!',
+// }
 
 export default function RootLayout({
   children,
@@ -17,7 +18,9 @@ export default function RootLayout({
 
   return (
     <html lang="en" style={{ scrollBehavior: "smooth" }}>
+      <title>Raksha S</title>
       <Head>
+        <meta name="description" content="Your next UI/UX Designer!" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -28,51 +31,83 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="anonymous"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,500;1,500&display=swap"
+            rel="stylesheet"
+          />
+        </link>
       </Head>
 
       <body>
-        <nav className="main-nav">
-          <Image
-            className="menu-icon"
-            src="/icons/menu_icon.svg"
-            alt="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTsptVQSRVRivZeLcgXA7rv3z0na_vtcJ-xapXoH-bhVNM78ghI"
-            width={30}
-            height={30}
-          />
-          <ul className="nav-ul">
-            <li>
-              <Link className="nav-li" href="#my-projects">
-                MY PROJECTS
-              </Link>
-            </li>
-            <li>
-              <Link className="nav-li" href="#about-me">
-                ABOUT ME
-              </Link>
-            </li>
-            <li>
-              <Link className="nav-li" href="#">
-                MY BLOGS
-              </Link>
-            </li>
-            <li>
-              <Link className="nav-li" href="#">
-                CONTACT ME
-              </Link>
-            </li>
-            <li>
-              <Link className="nav-li" href="#">
-                SUPPORT
-              </Link>
-            </li>
-          </ul>
-          <Link
-            href="https://drive.google.com/file/d/1mp_nRpDA44XLWsJkfrlpWJ1eqOSR7xtc/view?usp=sharing"
-            target="_blank"
-          >
-            <button className="dark-button">RESUME ↗</button>
-          </Link>
+        <nav>
+          <div className="main-nav">
+            <Image
+              className="menu-icon"
+              src="/icons/menu_icon.svg"
+              alt="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTsptVQSRVRivZeLcgXA7rv3z0na_vtcJ-xapXoH-bhVNM78ghI"
+              width={30}
+              height={30}
+              onClick={() => {
+                console.log("clicked");
+                const navBarElement = document.getElementById(
+                  "responsive-nav-bar-898"
+                );
+                if (navBarElement) {
+                  navBarElement.classList.toggle("hidden");
+                }
+              }}
+            />
+            <ul className="nav-ul">
+              <li>
+                <Link className="nav-li" href="#my-projects">
+                  MY PROJECTS
+                </Link>
+              </li>
+              <li>
+                <Link className="nav-li" href="#about-me">
+                  ABOUT ME
+                </Link>
+              </li>
+              <li>
+                <Link className="nav-li" href="#">
+                  MY BLOGS
+                </Link>
+              </li>
+              <li>
+                <Link className="nav-li" href="#">
+                  CONTACT ME
+                </Link>
+              </li>
+              <li>
+                <Link className="nav-li" href="#">
+                  SUPPORT
+                </Link>
+              </li>
+            </ul>
+            <Link
+              href="https://drive.google.com/file/d/1mp_nRpDA44XLWsJkfrlpWJ1eqOSR7xtc/view?usp=sharing"
+              target="_blank"
+            >
+              <button className="dark-button">RESUME ↗</button>
+            </Link>
+          </div>
+          <div id="responsive-nav-bar-898" className="responsive-nav">
+            <ul>
+              <li>MY PROJECTS</li>
+              <li>MY PROJECTS</li>
+              <li>MY PROJECTS</li>
+              <li>MY PROJECTS</li>
+            </ul>
+          </div>
         </nav>
+
         {children}
         <footer className="main-footer">
           <div className="footer-routes">

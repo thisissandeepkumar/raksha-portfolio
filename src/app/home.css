@@ -27,17 +27,74 @@
   font-weight: 400;
 }
 
+.audio-section {
+  min-width: 85px;
+  min-height: 85px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  margin: 0;
+}
+
+.play-border {
+  width: 55px;
+  height: 55px;
+  background-origin: padding-box;
+  border: 1px solid #040404;
+  border-radius: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 15px 0 0px;
+}
+
+.play-border:hover {
+  background-color: #040404;
+  border: 1px solid #040404;
+  border-radius: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.play-icon {
+  width: 25px;
+  height: 25px;
+  position: relative;
+}
+
+.audio-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29.05px;
+  margin: 0;
+}
+
 .card-image-content {
   width: 472px;
   height: 550px;
   position: relative;
-  transition: right 2s, top 2s, transform 2s;
+  transition: 0.8s;
+  /* animation: 0.4s; */
+  transform: scale(1.0);
+  /* Animate */
 }
 
 .card-image-content:hover {
   position: relative;
-  right: 80px;
-  top: 20px;
+  /* right: 80px;
+  top: 20px; */
+  /* transform: rotate3d(0, 1, 0, 180deg); */
+  /* transform: rotate(180deg); */
+  transform: translate(-50px, 30px);
+  /* Animate */
+  transition: 0.8s;
 }
 
 .numeric-container {
@@ -49,7 +106,13 @@
   align-items: center;
   color: #FFFFFF;
   line-height: 67px;
-  margin: 0;
+  margin: 0px 0px 32px 0px;
+  position: absolute;
+  width: 100vw;
+}
+
+.separation-container {
+  min-height: 24vh;
 }
 
 .numeric-tile {
@@ -90,10 +153,61 @@
   row-gap: 25px;
 }
 
-.projects-grid-tile {
+.outer-projects-tile {
   position: relative;
   width: 28vw;
   height: 28vw;
+}
+
+.projects-image {
+  position: relative;
+  width: 28vw;
+  height: 28vw;
+  transition: all 0.5s ease-in-out;
+}
+
+.projects-grid-tile {
+  position: absolute;
+}
+
+.projects-image:hover {
+  transform: scale(0.8);
+  filter: blur(10px);
+}
+
+.projects-view-button {
+  position: absolute;
+  width: 14vw;
+  height: auto;
+  left: 7vw;
+  top: calc(14vw - 13px);
+}
+
+.hidden {
+  display: none;
+}
+
+.tile-blur {
+  transform: scale(0.8);
+  filter: blur(10px);
+}
+
+.white-button {
+  background-color: white;
+  height: 46px;
+  color: #040404;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 8px 32px 8px 32px;
+  cursor: pointer;
+  border: none;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.white-button:hover {
+  background-color: white;
+  text-decoration: underline;
 }
 
 .scroll-up-button {
@@ -130,6 +244,333 @@
   margin-left: 25px;
   text-align: justify;
 }
+
+.skills-section {
+  margin: 0 144px 0 144px;
+}
+
+.skills-section-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.skills-title-container {
+  width: 30%;
+  height: auto;
+}
+
+.skills-description-section {
+  width: 70%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 25px;
+  row-gap: 25px;
+}
+
+.skills-description-tile {
+  height: 85px;
+}
+
+.skills-title {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38.73px;
+  display: inline-table;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  z-index: 1;
+}
+
+.skills-underline {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  background-color: #E5E2F6;
+  width: 100%;
+  height: 19px;
+  margin: 0;
+}
+
+.skills-title-underline {
+  background-color: #D1F3E1;
+  display: inline-flex;
+}
+
+.skills-description-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 27.6px;
+  margin: 0 0 5px 0;
+}
+
+.skills-description-level {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18.4px;
+  font-style: italic;
+  margin: 0;
+}
+
+.hobbies-section {
+  margin: 0 144px 20px 144px;
+}
+
+.hobbies-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.hobbies-card {
+  width: 23vw;
+}
+
+.hobbies-card:nth-child(2n) {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.hobbies-image {
+  width: 23vw;
+  height: 23vw;
+  position: relative;
+  margin: auto;
+}
+
+.hobby-title {
+  font-family: "Inter" sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38.73px;
+  margin: 0;
+}
+
+.hobby-description {
+  font-family: "Inter" sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22.48px;
+  margin: 0;
+  text-align: justify;
+}
+
+.awards-section-container {
+  height: 737px;
+  background-color: #F8F0E2;
+  padding: 68px 0 64px 0;
+}
+
+.awards-section-content {
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.awards-card {
+  max-width: 36vw;
+  align-items: center;
+  margin: 0 32px 0;
+}
+
+.awards-card:nth-child(1) {
+  margin: 0 32px 0 144px;
+} 
+
+.awards-image {
+  width: 36vw;
+  height: 30vw;
+  position: relative;
+}
+
+.awards-double-image {
+  width: 36vw;
+  height: 30vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.awards-image-1 {
+  width: 36vw;
+  height: 6vw;
+  position: relative;
+  margin-bottom: 9px;
+}
+
+.awards-image-2 {
+  width: 36vw;
+  height: 22vw;
+  position: relative;
+}
+
+.awards-title {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29.05px;
+  margin: 0;
+}
+
+.awards-description {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.78px;
+  color: #7A7A7A;
+}
+
+.buy-coffee-container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 64px;
+  max-width: 80vw;
+  align-self: center;
+  background-color: #E5E2F6;
+  padding: 48px 64px;
+}
+
+.buy-coffee-heading {
+  margin: 0;
+}
+
+.buy-coffee-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.buy-coffee-description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.buy-coffee-dollar {
+  font-family: "Broadsheet", sans-serif;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 60.8px;
+  margin: 0;
+}
+
+.buy-coffee-request {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 33.47px;
+  margin: 0 15px 0 15px;
+}
+
+.design-process-container {
+  height: 520px;
+  background: linear-gradient(180deg, #E5E2F6 50%, white 50%);
+  padding: 87px 0 0 0;
+}
+
+.design-process-inner-grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  row-gap: 18px;
+  margin: 64px 5vw 0 5vw;
+}
+
+.design-process-card {
+  width: 16vw;
+  height: auto;
+  background-color: white;
+  box-shadow: 0px 9px 18px rgba(165, 143, 193, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.design-process-image {
+  position: relative;
+  width: 55.75px;
+  height: 57.39px;
+}
+
+.design-process-description {
+  color: #040404;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.78px;
+  text-align: center;
+}
+
+.skills-divider {
+  margin: 32px 0px;
+  color: #040404;
+}
+
+.blog-card-div {
+  padding: 32px 0;
+}
+
+.blogs-section {
+  margin: 0 144px;
+}
+
+.blog-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 22vw;
+}
+
+.blog-card-thumbnail {
+  min-width: 25vw;
+  min-height: 18vw;
+  position: relative;
+  margin-right: 25px;
+}
+
+.blog-content-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.blog-title {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 50.83px;
+  margin: 0 0 24px 0;
+}
+
+.blog-published {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29.05px;
+  color: #040404;
+  margin: 0 0 24px 0;
+}
+
+.arrow {
+  position: absolute;
+}
+
 
 @media screen and (min-width: 768px) and (max-width: 1080px) {
 
@@ -171,6 +612,107 @@
     min-width: 80vw;
     min-height: 80vw;
   }
+
+  .skills-section-box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .hobbies-card {
+    width: 80vw;
+    margin-bottom: 20px;
+  }
+
+  .hobbies-image {
+    width: 80vw;
+    height: 80vw;
+    margin-bottom: 10px;
+  }
+
+  .hobbies-section {
+    margin: 0 64px 20px 64px;
+  }
+
+  .hobbies-container {
+    flex-direction: column;
+  }
+
+  .hobbies-card:nth-child(2n) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .buy-coffee-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .buy-coffee-description {
+    margin: 0 0 32px 0;
+  }
+
+  .blogs-section {
+    margin: 0 64px;
+  }
+
+  .blog-card {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .blog-card-div {
+    padding: 42px 0;
+  }
+
+  .blog-card-thumbnail {
+    min-width: 80vw;
+    min-height: 40vw;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .white-button {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+
+  .skills-divider {
+    margin: 0px 0px;
+  }
+
+  .skills-title-container {
+    width: 80%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .skills-title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38.73px;
+  }
+
+  .skills-section {
+    margin: 0 24px;
+  }
+
+  .skills-description-section {
+    margin-top: 32px;
+  }
+
+  .skills-description-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 27.6px;
+  }
+
+  .skills-description-level {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18.4px;
+  }
 }
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
@@ -197,13 +739,17 @@
   }
 
   .card-image-content {
-    max-width: 330px;
-    height: 420px;
+    max-width: 390px;
+    height: 445px;
   }
 
   .numeric-container {
     flex-direction: column;
     height: 520px;
+  }
+
+  .separation-container {
+    min-height: 520px;
   }
 
   .projects-grid {
@@ -234,5 +780,167 @@
 
   .about-me-description {
     min-width: 80vw;
+  }
+
+  .skills-section-box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .skills-description-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .hobbies-card {
+    width: 80vw;
+  }
+
+  .hobbies-image {
+    width: 80vw;
+    height: 80vw;
+  }
+
+  .hobbies-section {
+    margin: 0 64px 20px 64px;
+  }
+
+  .hobbies-container {
+    flex-direction: column;
+  }
+
+  .hobbies-card:nth-child(2n) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .buy-coffee-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .buy-coffee-description {
+    margin: 0 0 32px 0;
+  }
+
+  .design-process-container {
+    height: auto;
+  }
+
+  .design-process-inner-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .design-process-card {
+    width: 75vw;
+    height: 35vw;
+  }
+
+  .design-process-image {
+    width: 20%;
+    height: 45%;
+  }
+
+  .design-process-description {
+    font-weight: 400;
+    font-size: 4vw;
+    line-height: 16.94px;
+  }
+
+  .blogs-section {
+    margin: 0 64px;
+  }
+
+  .blog-card {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .blog-card-div {
+    padding: 42px 0;
+  }
+
+  .blog-card-thumbnail {
+    min-width: 80vw;
+    min-height: 40vw;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .blog-title {
+    font-weight: 700;
+    font-size: 18px;
+    text-align: justify;
+  } 
+
+  .blog-published {
+    font-size: 16px;
+  }
+
+  .section-head {
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 36.1px;
+  }
+
+  .projects-image {
+    width: 80vw;
+    height: 80vw;
+  }
+
+  .outer-projects-tile {
+    width: 80vw;
+    height: 80vw;
+  }
+
+  .projects-view-button {
+    position: absolute;
+    width: 65vw;
+    height: auto;
+    left: 7vw;
+    top: calc(40vw - 13px);
+  }
+
+  .separation-container-scroll {
+    min-height: 66px;
+  }
+
+  .hobbies-card {
+    margin-bottom: 10px;
+  }
+
+  .hobby-title {
+    margin-top: 5px;
+  }
+
+  .skills-divider {
+    margin: 0px 0px;
+  }
+
+  .skills-title-container {
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .skills-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.05px;
+  }
+
+  .skills-section {
+    margin: 0 24px;
+  }
+
+  .skills-description-section {
+    margin-top: 32px;
   }
 }
