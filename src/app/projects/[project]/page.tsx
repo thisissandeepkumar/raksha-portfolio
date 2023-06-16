@@ -2,6 +2,9 @@
 
 import Image from "next/image";
 import styles from "./styles.module.css"
+import { useEffect, useState } from "react";
+import {getStorage, ref, getDownloadURL} from "firebase/storage";
+import firebaseApp from "../../firebaseApp"
 
 const projectData = [
   {
@@ -82,6 +85,7 @@ const projectData = [
       "Prepare wireframes, mock-ups, and presentations to showcase the project's design and progress.",
     ],
     visualDesigns: ["tng-2.png", "tng-3.png"],
+    visualDesignVideo: "tng-video.mov",
     designApproach: [
       "Understand the problem statement.",
       "Gather Inspiration and prepare mood-boards for the design concept.",
@@ -151,6 +155,7 @@ const projectData = [
       "Design an efficient and seamless checkout process to reduce cart abandonment rates.",
     ],
     visualDesigns: ["/images/seacutt-vdi.png"],
+    visualDesignVideo: "seacutt-video.mov",
     designApproach: [
       "Clear labeling: Use clear labeling for all app elements and actions to make it easy for users to navigate and understand the app's features.",
       "Minimalistic layout: Create a clean and minimalistic UI layout to highlight the seafood products and simplify the ordering process.",
@@ -197,6 +202,7 @@ const projectData = [
       "Design a visually appealing interface to engage users and encourage regular usage",
     ],
     visualDesigns: ["/images/ato-vdi.png"],
+    visualDesignVideo: "anonymous.mov",
     designApproach: [
       "Simplify the onboarding process with easy-to-follow steps to minimize user drop-offs",
       "Implement a clean and modern design to increase visual appeal and user engagement",
@@ -246,6 +252,7 @@ const projectData = [
       "Provide advanced analytics and reporting features for administrators, allowing them to track fuel deliveries, monitor performance, and optimize the overall fuel delivery process.",
     ],
     visualDesignsImages: ["shell-vdi.png"],
+    visualDesignVideo: "avighna.mov",
     designApproach: [
       "Understand the problem statement.",
       "Gather Inspiration and prepare mood-boards for the design concept.",
@@ -360,15 +367,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
             </div>
           )}
 
-          <div>
-            <video
-              className={styles.visualDesignVideo}
-              src={`/videos/${project.visualDesignVideo}`}
-              autoPlay
-              loop
-              typeof="video/mov"
-            ></video>
-          </div>
+          <VideoComponent filename={project.visualDesignVideo} />
         </div>
       </div>
       <div className={`${styles.alignment}`}>
@@ -384,9 +383,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
         <p className={`${styles.textContent}`}>{project.toolsUsed}</p>
       </div>
       {project.mobileUserInterfaces.length > 0 ? (
-        <div
-          className={`${styles.mobileInterface}`}
-        >
+        <div className={`${styles.mobileInterface}`}>
           <div className={`${styles.alignment}`}>
             <h3 className={styles.contentHeading}>Mobile User Interfaces</h3>
             <div className={styles.interfaceContainer}>
@@ -430,6 +427,33 @@ function ProjectDetails({ value, subheading }: { value: string, subheading: stri
     <div>
       <p className={`${styles.projectValue} ${styles.zmzp}`}>{value}</p>
       <p className={`${styles.projectSubheading} ${styles.zmzp}`}>{subheading}</p>
+    </div>
+  );
+}
+
+function VideoComponent({filename} : {filename: string}) {
+
+  const [videoUrl, setVideoUrl] = useState<string | null>(null)
+
+  useEffect(() => {
+    const storage = getStorage(firebaseApp)
+    const storageRef = ref(storage, "targo-vd-video.mov");
+    getDownloadURL(storageRef).then((url) => {
+      setVideoUrl(url)
+    }).catch((error) => {
+      console.log(error)
+    })
+  }, [filename])
+
+  return (
+    <div>
+      {videoUrl? (<video
+        className={styles.visualDesignVideo}
+        src={videoUrl!}
+        autoPlay
+        loop
+        typeof="video/quicktime"
+      />): (<div></div>)}
     </div>
   );
 }

@@ -4,7 +4,9 @@ import Image from "next/image";
 import "./home.css"
 import "./globals.css"
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+import firebaseApp from "./firebaseApp";
+import {getStorage, getDownloadURL, ref} from "firebase/storage"
 
 type Data = [
   {
