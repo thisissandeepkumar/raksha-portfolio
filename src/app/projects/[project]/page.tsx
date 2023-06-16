@@ -109,8 +109,8 @@ const projectData = [
       "Dashboard: The dashboard displays leads generated on various social media platforms, providing detailed statistics on age, gender, and demographics.",
       "Customer Leads: This screen presents a list of leads in a tabular format, allowing the user to quickly view the user's location, type of insurance they are interested in, and the source of the lead.",
       "Notifications: The notification tab is a crucial section of the user's screen, accessible by clicking the notification button. This screen displays important notifications such as follow-up reminders, customer lead conversions, and messages.",
-      "Insurance Plans: Admins can access this page to create new insurance plans for existing policies, aimed at attracting more customers. This screen also serves as a centralized information hub for plans and specific terms to keep in mind when pitching them to new leads."
-  ],
+      "Insurance Plans: Admins can access this page to create new insurance plans for existing policies, aimed at attracting more customers. This screen also serves as a centralized information hub for plans and specific terms to keep in mind when pitching them to new leads.",
+    ],
     projectGoals: [
       "The Design must be Minimal",
       "Content must be Informative to marketing teams",
@@ -130,18 +130,19 @@ const projectData = [
     webUserInterfaces: [],
     results:
       "The resulting screens were simple to use, informative and concise with content. This was the intention and I seem to have achieved it. Since this is a practice project, this design remains in the prototype phase only. Additionally, one of my main goals was to learn designing for light and dark themes. This helped me understand how to utilise color contrast ratio guidelines like 4:5:1 or using WCG2.0 guidelines to make light and dark theme transitions.",
-  }
+  },
   {
     id: "SeaCutt",
     mainTitle: "SeaCUTT - Retail Sea-food Ordering & Delivery App",
-    labels: ["Mobile App","UI Design","Delivery App"],
+    labels: ["Mobile App", "UI Design", "Delivery App"],
     description:
       "SeaCutt is a retail seafood ordering and delivery app that allows retailers to order fresh sea items directly from fishermen and have them delivered to their selling outlets. The app features an intuitive and pleasing user interface that simplifies the ordering process for users. The app is scheduled to launch in June 2023.",
     duration: "24 hours",
     screens: "5",
     role: "UI Designer",
     projectImage: "/images/seacutt-cover.png",
-    projectScope: "This app is designed for retailers to buy sea-fish from fishermen directly."
+    projectScope:
+      "This app is designed for retailers to buy sea-fish from fishermen directly.",
     projectGoals: [
       "Design a visually appealing, user-friendly UI design that simplifies the ordering process for retailers.",
       "Create a clean, uncluttered UI layout with consistent typography and color scheme.",
@@ -174,14 +175,21 @@ const projectData = [
   {
     id: "anonynmous",
     mainTitle: "Anonymous Tip-Off System",
-    labels: ["Crime Investigation Systems","Mobile App","UI Design","UX Design","Smart Systems"],
+    labels: [
+      "Crime Investigation Systems",
+      "Mobile App",
+      "UI Design",
+      "UX Design",
+      "Smart Systems",
+    ],
     description:
       "The Anonymous tip-off system allows witnesses to submit crime tips anonymously through blockchain technology. The goals include ensuring the anonymity of informants, increasing citizen responses, incentivising valid tips, providing better insights to law enforcement, establishing a platform for crime reports, and reducing paperwork. This design was done as part my Final Year Engineering Project.",
     duration: "24 weeks",
     screens: "35",
     role: "UI & UX Designer",
     projectImage: "/images/ato-cover-Image.png",
-    projectScope: "The scope of the project is to design and develop a user-friendly and secure anonymous tip off app that encourages users to report crimes they may have witnessed without fear of retribution.",
+    projectScope:
+      "The scope of the project is to design and develop a user-friendly and secure anonymous tip off app that encourages users to report crimes they may have witnessed without fear of retribution.",
     projectGoals: [
       "Develop an intuitive UI for the anonymous tip off app to increase ease of use for users",
       "Implement UX design strategies to ensure users feel safe and secure when submitting tips",
@@ -213,16 +221,22 @@ const projectData = [
       "The anonymous tip off app achieved its goal of creating a user-friendly and secure platform for users to submit tips about crimes they may have witnessed. The app's intuitive UI and UX design approach led to increased adoption and participation from users, resulting in more tips being submitted to law enforcement agencies. Additionally, the app's secure features and visual appeal contributed to a sense of trust and safety among users, encouraging them to use the app frequently.",
   },
   {
-    id: "shell",
+    id: "avighna",
     mainTitle: "Shell x Avigna - Fuel Booking & Delivery App",
-    labels: ["Fuel Delivery App","Booking & Delivery System","Mobile & Web Interface","Role Based Access"],
+    labels: [
+      "Fuel Delivery App",
+      "Booking & Delivery System",
+      "Mobile & Web Interface",
+      "Role Based Access",
+    ],
     description:
       "Avigna App, a partner of Shell, is a cutting-edge mobile application that enables Shell customers to seamlessly book fuel deliveries to their desired location. The application allows customers to specify their delivery location, the purpose of the fuel, the desired fuel quantity, and their unique customer identification number (UID).",
     duration: "3 weeks",
     screens: "37",
     role: "UI Designer",
     projectImage: "/images/shell-cover-Image.png",
-    projectScope: "The app is specifically designed for Shell customers, drivers, and administrators, and utilizes advanced algorithms to optimize fuel delivery routes and schedules.",
+    projectScope:
+      "The app is specifically designed for Shell customers, drivers, and administrators, and utilizes advanced algorithms to optimize fuel delivery routes and schedules.",
     projectGoals: [
       "Create an intuitive and user-friendly interface that is easy to navigate and understand for all users.",
       "Design an efficient and seamless booking process for fuel deliveries, allowing customers to easily specify their delivery location, fuel quantity, and purpose of fuel.",
@@ -231,7 +245,7 @@ const projectData = [
       "Utilize Shell's branding and visual identity to create a cohesive design that aligns with the company's values and mission.",
       "Provide advanced analytics and reporting features for administrators, allowing them to track fuel deliveries, monitor performance, and optimize the overall fuel delivery process.",
     ],
-    visualDesigns: ["/images/shell-vdi.png"],
+    visualDesignsImages: ["shell-vdi.png"],
     designApproach: [
       "Understand the problem statement.",
       "Gather Inspiration and prepare mood-boards for the design concept.",
@@ -242,27 +256,28 @@ const projectData = [
     ],
     toolsUsed: "Figma, Adobe Illustrator, Balsamiq",
     mobileUserInterfaces: [
-      "/images/1-smi.png",
-      "/images/2-smi.png",
-      "/images/3-smi.png",
-      "/images/4-smi.png",
-      "/images/5-smi.png",
-      "/images/6-smi.png",
-      "/images/7-smi.png",
-      "/images/8-smi.png",
-      "/images/9-smi.png",
-      "/images/10-smi.png",
+      "1-smi.png",
+      "2-smi.png",
+      "3-smi.png",
+      "4-smi.png",
+      "5-smi.png",
+      "6-smi.png",
+      "7-smi.png",
+      "8-smi.png",
+      "9-smi.png",
+      "10-smi.png",
     ],
     webUserInterfaces: [
-      "/images/1-swi.png",
-      "/images/2-swi.png",
-      "/images/3-swi.png",
-      "/images/4-swi.png",
-      "/images/5-swi.png",
+      "1-swi.png",
+      "2-swi.png",
+      "3-swi.png",
+      "4-swi.png",
+      "5-swi.png",
     ],
     results:
       "The clients were impressed with the intuitive user interface and user-friendly design of the mobile app, which made it easy for customers, drivers, and administrators to use the app efficiently. The advanced analytics and reporting features of the app were particularly impressive to the client, as they provided valuable insights into the fuel delivery process and helped optimize performance.",
   },
+];
 
 export default function ProjectPage({ params }: { params: { project: string } }) {
 
