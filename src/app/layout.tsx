@@ -134,28 +134,48 @@ export default function RootLayout({
             </div>
           </div>
           <div className="social-handles">
-            <SocialBubble icon="/icons/instagram.svg" />
-            <SocialBubble icon="/icons/linkedin.svg" />
+            <SocialBubble
+              icon="/icons/instagram.svg"
+              redirectUrl="https://www.instagram.com/design_drip"
+            />
+            <SocialBubble
+              icon="/icons/linkedin.svg"
+              redirectUrl="https://www.linkedin.com/in/rakshaa"
+            />
             <SocialBubble icon="/icons/behance.svg" />
           </div>
+          <BuiltWithLove />
         </footer>
       </body>
     </html>
   );
 }
 
-function SocialBubble({icon} : {icon: string}) {
+function SocialBubble({ icon, redirectUrl }: { icon: string; redirectUrl?: string}) {
   return (
     <div className="social-bubble">
       <div className="social-bubble-icon">
-        <Image
-          src={icon}
-          alt="Instagram"
-          // width={40}
-          // height={40}
-          fill
-        />
+        <a href={redirectUrl} target="_blank">
+          <Image
+            src={icon}
+            alt="Instagram"
+            // width={40}
+            // height={40}
+            fill
+          />
+        </a>
       </div>
+    </div>
+  );
+}
+
+function BuiltWithLove() {
+  return (
+    <div>
+      <h3 className="built-with">Built with ❤️</h3>
+      <a className="built-with-by" href="https://github.com/thisissandeepkumar" target="_blank">
+        By Sandeep
+      </a>
     </div>
   );
 }
